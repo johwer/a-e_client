@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="sv" class="no-js">
+<head>
+	<meta charset="iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE; IE=9; IE=8;">
+	
+	<title>Agent and employee client</title>
+
+	<!-- Include Scripts -->
+	<script src="/javascripts/tools/jquery-1.9.1.js"> </script>	
+	<script src="/javascripts/tools/handlebars.js"></script>
+	<!-- Include Scripts END-->
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="/stylesheets/oceanfront.css"/>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/a-e_client.css"/>
+	<!-- Stylesheets END-->
+
+
+
+
+</head>
+<body>
+	<div id="main-content">
+		<div id="search-area">
+			<select>
+				<option selected="selected" value="bo">Boxoffice.se</option>
+				<option value="ts">Ticketservice.no</option>
+				<option value="ud">Arteudland.dk</option>
+			</select>
+			<input type="text" value="" />
+			
+			<button>Submit</button>
+
+			<button class="right">Add agency</button>
+			<button class="right">Add member</button>
+			
+		</div>
+		<div id="navigator-area">
+			
+				
+				<div id="navigator-area-agency">
+				<h3>Agency field</h3>
+				<div id="navigator-area-agency-list">
+				<script id="navigator-area-agencyTemplate" type="text/x-handlebars-template">
+				<table border="0" class="tableAgency">
+					<tr class="headings">
+						<th>company</th>
+						<th>country</th>
+						<th>city</th>
+						<th>area_code</th>
+						<th>address</th>
+					</tr>
+					
+					
+					{{#each this}}
+					<tr class="agencyInfo">
+						<td><a href="#">{{Provider}}</a></td>
+						<td><a href="#">Sweden</a></td>
+						<td><a href="#">{{DestinationCity}}</a></td>
+						<td><a href="#">{{PricePerPerson}}</a></td>
+						<td><a href="#">{{Provider}}</a></td>
+					</tr>
+					{{/each}}
+					</script>
+					
+				</table>
+				</div>
+			</div>
+			<div id="navigator-area-member">
+				<h3>Member field</h3>
+				<div id="navigator-area-member-list">
+				<script id="navigator-area-memberTemplate" type="text/x-handlebars-template">
+				<table border="0" class="tableMember">
+					<tr>
+						<th>login</th>
+						<th class="align-right">first name</th>
+						<th>last name</th>
+						<th>e-mail address</th>
+						<th>phone-number</th>
+
+					</tr>
+					{{#each this}}
+					<tr>
+						<td><a href="#" class="{{Provider}}">{{Provider}}@gmail.com</a></td>
+						<td class="align-right"><a href="#">{{Provider}}</a></td>
+						<td><a href="#">{{DestinationCity}}</a></td>
+						<td><a href="mailto:{{Provider}}.{{DestinationCity}}@resia.com">{{Provider}}.{{DestinationCity}}@resia.com</a></td>
+						<td><a href="tel:{{PricePerPerson}}-{{PricePerPerson}}" title="">{{PricePerPerson}}-{{PricePerPerson}}</a></td>
+					</tr>
+				    {{/each}}
+				</table>
+				</script>
+				</div>
+			</div>
+		</div>
+		<div id="view-area">
+
+			<h3>Results</h3>
+			<div id="view-area-list">
+				<table border="0">
+					<tr>
+						<th>Integer member_id</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>password</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>encrypted_password</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>first_name</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>last_name</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>email</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>company_name</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>company_chain</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>country</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>city</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>area_code</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>company_name</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>address</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>phone_daytime</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>phone_home</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>phone_cellular</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>fax</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>birthdate</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>sex</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>personal_description</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>civil_status</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>personal_description</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					
+					<tr>
+						<th>civil_status</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>occupation</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>traveller_type</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>show_acceptance</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>last_visit</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>show_acceptance</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>belongs_to_site</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>regdate</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>unregdate</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>vip</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>status</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>want_email</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>session_code</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>updated</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>last_news_email</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>last_news_email_info</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+					<tr>
+						<th>origin</th>
+						<td><a href="#">johanwergelius@gmail.com</a></td>
+						
+					</tr>
+				</table>
+
+			</div>
+				<button class="removeButton">Edit</button>
+				<button class="removeButton">Remove</button>
+		</div>
+	</div>
+	<!-- Include Scripts -->
+
+	<script src="/javascripts/framework/listners.js"></script>
+	<script src="/javascripts/framework/communication.js"></script>
+	<script src="/javascripts/framework/tempStore.js"></script>
+	<script src="/javascripts/framework/display.js"></script>
+	<script src="/javascripts/framework/main.js"></script>
+
+
+	<!-- Include Scripts END-->
+</body>
+</html>
+
+
+

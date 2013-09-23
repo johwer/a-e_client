@@ -1,4 +1,107 @@
+<!doctype html>
+<html lang="sv" class="no-js">
+<head>
+	<meta charset="iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE; IE=9; IE=8;">
+	
+	<title>Agent and employee client</title>
 
+	<!-- Include Scripts -->
+	<script src="/javascripts/tools/jquery-1.9.1.min.js"> </script>
+	<!-- Include Scripts END-->
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="/stylesheets/oceanfront.css"/>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/a-e_client.css"/>
+	<!-- Stylesheets END-->
+
+</head>
+<body>
+	<div id="main-content">
+		<div id="search-area">
+			<div class="styled-select">
+				<select>
+					<option selected="selected" value="bo">Boxoffice.se</option>
+					<option value="ts">Ticketservice.no</option>
+					<option value="ud">Arteudland.dk</option>
+				</select>
+			</div>
+			<input type="text" value="" class="search" placeholder="Search" />
+
+
+			<div class="buttons" style="display:inline-table;">
+			<button class="submit button blue" id="sumbit">Submit</button>
+
+			<button class="addAgency button green right">Add agency</button>
+			<button class="addMember button green right">Add member</button>
+			</div>
+			
+			
+		</div>
+		<div id="navigator-area">
+			
+				
+				<div id="navigator-area-agency">
+				<h3>Agency field</h3>
+				<div id="navigator-area-agency-list">
+					<table border="0" class="tableAgency" id="tableAgency">
+						<tr class="headings">
+							<th>company</th>
+							<th>country</th>
+							<th>city</th>
+							<th>area_code</th>
+							<th>address</th>
+						</tr>
+						
+					</table>
+				</div>
+			</div>
+			<div id="navigator-area-member">
+				<h3>Members field</h3>
+				<div id="navigator-area-member-list">
+				
+				<table border="0" class="tableMember" id="tableMember">
+					<tr>
+						<th>login</th>
+						<th class="align-right">first name</th>
+						<th>last name</th>
+						<th>e-mail address</th>
+						<th>phone-number</th>
+				</table>
+				
+				</div>
+			</div>
+		</div>
+		<div id="view-area">
+
+			<h3>Member info</h3>
+			<div id="view-area-list">
+				<table border="0" id="tableView">
+					
+				</table>
+
+			</div>
+				<button class="editButton button orange margin10">Edit</button>
+				<button class="removeButton button red margin10">Remove</button>
+		</div>
+	</div>
+	<!-- Include Scripts -->
+	
+	<!--<script src="/javascripts//tools/jQuery.event.fix.js"></script>-->
+	<script src="/javascripts//tools/fastfix.js"></script>
+	<script src="/javascripts/framework/tempStore.js"></script>
+	<script src="/javascripts/framework/event.js"></script>
+	<script src="/javascripts/framework/functionality.js"></script>
+	<script src="/javascripts/framework/listners.js"></script>
+	<script src="/javascripts/framework/communication.js"></script>
+	
+	<script src="/javascripts/framework/display.js"></script>
+	<script src="/javascripts/framework/main.js"></script>
+
+
+	<!-- Include Scripts END-->
+</body>
+</html>
 
 
 
