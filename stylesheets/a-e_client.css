@@ -21,6 +21,9 @@ select:focus {outline: none;
 	background: #fff;
 }
 */
+h1 {
+	font-size: 3.2em;
+}
 a {
 	text-decoration: none;
 	color: #000;
@@ -38,7 +41,7 @@ input {
 	-moz-padding-end: 0;
 }
 
-input{
+input.search{
 	background-color: #fff;
 	border: 1px solid rgb(185,185,185);
 	border-top-color: rgb(160,160,160);
@@ -51,7 +54,7 @@ input{
 	padding-left: 10px;
 	width: 400px;
 }
-input:focus{
+input.search:focus{
 	-webkit-animation: blink 1.3s linear infinite;
 	cursor: text;
 	font: 18px arial,sans-serif;
@@ -59,7 +62,7 @@ input:focus{
 	border: 1px solid #4d90fe;
 	padding-left: 40px;
 }
-input {
+input.search {
 	width: 450px;
 	padding-left: 40px;
 	line-height: 1.5em;
@@ -198,6 +201,9 @@ tr:nth-child(even) {background: #f3f6fa}
 	max-height: 400px;
 	overflow: auto;
 }
+#view-area #view-area-list #tableView th, #edit-add-list #tableEditAdd th {
+	width: 13%;
+}
 /*button*/
 /* orange */
 .orange {
@@ -308,4 +314,85 @@ tr:nth-child(even) {background: #f3f6fa}
 }
 .margin10{
 	margin: 10px;
+}
+
+
+/*POPUP*/
+#popup input{
+	background: transparent;
+}
+.ui-popup-overlay, .ui-widget-overlay {
+    background: url("../css.ui/images/overlay_bg.png?v=3.0.0.30030") repeat scroll left top transparent;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}.ui-popup {
+	display: none;
+	position: absolute;
+	/*top: 3%;*/
+	left: 3%;
+	right: 3%;
+	bottom: 3%;
+	background: none repeat scroll 0 0 white;
+	padding: 15px 10px;
+	z-index: 10000;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 1px 3px #0f0e0f;
+	-moz-box-shadow: 0 1px 3px #0f0e0f;
+	box-shadow: 0 1px 3px #0f0e0f;
+	-moz-transition: all .5s linear;
+	-webkit-transition: all .5s linear;
+	transition: all .5s linear;
+}
+.ui-popup .closeButton {
+background: url("/images/close-popup-white.png") no-repeat;
+display: block;
+width: 30px;
+height: 30px;
+float: right;
+position: absolute;
+right: -15px;
+top: -16px;
+cursor: pointer;
+z-index: 1;
+}
+
+.ui-popup_active_true, .ui-popup-overlay_active_true {
+display: block;
+}
+.ui-popup-overlay, .ui-widget-overlay {
+display: none;
+background: none repeat scroll 0 0 black;
+background: url("/images/overlay_bg.png") top left repeat;
+height: 100%;
+left: 0;
+opacity: 1;
+position: fixed;
+text-align: center;
+top: 0;
+width: 100%;
+z-index: 10000;
+}
+html.tau-app-frame .tau-app.tau-page-entity, .tau-app.tau-page-entity ~ .tau-bubble {
+    font-family: Arial;
+    font-size: 12px;
+}
+.ui-popup .ui-popup-content.tau-app {
+    position: relative;
+}
+.ui-popup .ui-popup-content {
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+}
+.tau-app {
+    height: 100%;
+    position: relative;
+    width: 100%;
 }

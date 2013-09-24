@@ -24,7 +24,19 @@ var MyEvent = MyEvent || {
         	console.log('submit');
         	Functionality.buttonSubmit();
         }
-
+        else if (elementClass === "editButton") {
+        	console.log('edit');
+        	Functionality.editButton();
+        }
+        else if (elementClass === "removeButton") {
+        	console.log('remove');
+        	Functionality.removeButton();
+        }
+        else if (elementClass === "closeButton") {
+        	console.log('closeButton');
+        	Functionality.closeButton();
+        }
+        
 	}
 
 }
