@@ -42,11 +42,11 @@ var MyEvent = MyEvent || {
         }
         else if (elementClass === "addPopupAddButton") {
         	console.log('addPopupAddButton clicked');
-        	Functionality.submitAddButton();
+        	Functionality.submitAddMemberButton();
         }
         else if (elementClass === "addPopupEditButton") {
         	console.log('addButton');
-        	Functionality.addButton();
+        	Functionality.submitAddAgencyButton();
         }
         
         
