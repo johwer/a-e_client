@@ -1,5 +1,6 @@
 var Functionality = Functionality || {
 	init: function () {
+		Communicator.getJSONObjTemp();
         
     },
     displayAgencyField: function() {
@@ -27,7 +28,7 @@ var Functionality = Functionality || {
 			identifier:'#view-area #tableView'
 		});
     },
-    buttonSubmit: function() {
+    searchSubmitButton: function() {
     	if(TempStore.getTypedVal()) {
 	    	console.log('display fields');
 	    	this.displayMemberField();
@@ -37,6 +38,12 @@ var Functionality = Functionality || {
     	else {
     		alert('Please type in the searchfield first');
     	}
+    },
+    submitAddMemberButton:function (){
+    	Communicator.getJSONObjAddMember();
+    },
+    submitAddAgencyButton:function (){
+    	Communicator.getJSONObjAddAgency();
     },
     editButton: function() {
     	if(TempStore.getMemberInfoDisplayed()){
@@ -49,23 +56,37 @@ var Functionality = Functionality || {
 	    	Listners.editAdd();
 	    	
 	    	Display.addButton({
-	    		text: 'edit',
+	    		text: 'Submit edit',
 	    		identifier: '#popup #edit-add-list',
-	    		class: 'addPopupEdidButton button orange margin10'
+	    		class: 'addPopupEditButton button orange margin10'
+	    	});
+	    	Listners.addListerns({
+            	identifier:'#popup .addPopupEditButton',
 	    	});
     	}
     	else {
     		alert('You have to select a member to edit first');
     	}
     },
-    closeButton: function() {
-    	Listners.removeListners('#popup');
-    	Display.toggleView('#popup');
-    	Display.removeInfo('#popup H1');
-    	Display.removeInfo('#popup #edit-add-list #tableEditAdd tr');
-    	Display.removeInfo('#popup button');
-
-
+    addButton: function() {
+    	
+	    	Display.toggleView('#popup');
+	    	Display.addH1({
+	    		text:'Add View',
+	    		identifier: '#popup #edit-add-list'
+	    	});
+	    	Display.displayEditAdd();
+	    	Listners.editAdd();
+	    	
+	    	Display.addButton({
+	    		text: 'Submit add',
+	    		identifier: '#popup #edit-add-list',
+	    		class: 'addPopupAddButton button orange margin10'
+	    	});
+	    	Listners.addListerns({
+            	identifier:'#popup .addPopupAddButton',
+	    	});
+    	
     },
     removeButton: function() {
     	if(TempStore.getMemberInfoDisplayed()){
@@ -80,6 +101,15 @@ var Functionality = Functionality || {
 		else {
     		alert('You have to select a member to edit first');
     	}
+    },
+    closeButton: function() {
+    	Listners.removeListners('#popup');
+    	Display.toggleView('#popup');
+    	Display.removeInfo('#popup H1');
+    	Display.removeInfo('#popup #edit-add-list #tableEditAdd tr');
+    	Display.removeInfo('#popup button');
+
+
     },
     agencySearch: function() {
     	Listners.removeListners('#navigator-area-agency-list #tableAgency td');

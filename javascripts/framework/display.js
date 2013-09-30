@@ -1537,13 +1537,15 @@ var Display = Display || {
 		var button = $('<h1>', {
 			  	text: obj.text,
 			});
+		console.log('obj.text addH1');
 		button.prependTo(obj.identifier);
 	},
 	addButton: function(obj) {
 		var button = $('<button>', {
-			  	text: 'Submit '+ obj.text,
+			  	text: obj.text,
 			  	class: obj.class
 			});
+		console.log(obj.class);
 		button.appendTo(obj.identifier);
 	}
 	

@@ -20,9 +20,9 @@ var MyEvent = MyEvent || {
             console.log("displayResults");
             Functionality.displayMemberInfo();
         }
-        else if (elementClass === "submit") {
+        else if (elementClass === "searchSubmit") {
         	console.log('submit');
-        	Functionality.buttonSubmit();
+        	Functionality.searchSubmitButton();
         }
         else if (elementClass === "editButton") {
         	console.log('edit');
@@ -36,6 +36,19 @@ var MyEvent = MyEvent || {
         	console.log('closeButton');
         	Functionality.closeButton();
         }
+        else if (elementClass === "addMemberButton") {
+        	console.log('addButton');
+        	Functionality.addButton();
+        }
+        else if (elementClass === "addPopupAddButton") {
+        	console.log('addPopupAddButton clicked');
+        	Functionality.submitAddButton();
+        }
+        else if (elementClass === "addPopupEditButton") {
+        	console.log('addButton');
+        	Functionality.addButton();
+        }
+        
         
 	}
 

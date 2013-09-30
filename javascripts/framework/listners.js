@@ -9,11 +9,15 @@ var Listners = Listners || {
             functionality: TempStore.setTypedVal
         });
         this.addListerns({
-            identifier:'#search-area .submit',
+            identifier:'#search-area .searchSubmit',
 
         });
         this.addListerns({
             identifier:'#view-area .editButton',
+
+        });
+        this.addListerns({
+            identifier:'#search-area .addMemberButton',
 
         });
         this.addListerns({
@@ -24,6 +28,7 @@ var Listners = Listners || {
             identifier:'#popup .closeButton',
 
         });
+        
         
     },
     editAdd: function () {

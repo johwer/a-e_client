@@ -19,24 +19,32 @@
 <body>
 	<div id="main-content">
 		<div id="search-area">
-			<div class="styled-select">
+			
+
+			<div class="searchContainer inline">
+<div class="styled-select valign-middle">
 				<select>
 					<option selected="selected" value="bo">Boxoffice.se</option>
 					<option value="ts">Ticketservice.no</option>
 					<option value="ud">Arteudland.dk</option>
 				</select>
+			
 			</div>
-			<input type="text" value="" class="search" placeholder="Search" />
-
-
-			<div class="buttons" style="display:inline-table;">
-			<button class="submit button blue" id="sumbit">Submit</button>
-
-			<button class="addAgency button green right">Add agency</button>
-			<button class="addMember button green right">Add member</button>
+			<input type="text" value="" class="search" placeholder="Search for" />
+			<button class="searchSubmit button blue" id="sumbit">Search</button>
 			</div>
 			
+
+
+				<div class="notification info canhide" style="position: relative;"><span>INFORMATION:</span><br/> Total angency: <span>123</span><br/>
+				Total agencys for <span>Boxoffice: </span><span>48</span><br/>
+				Number of users: <span>25</span><div class="icon"></div><div class="close-notification"></div></div>
 			
+				
+				<div class="inline">
+				<button class="addAgencyButton button green  ">+ Add agency</button>
+				<button class="addMemberButton button green  ">+ Add member</button>
+				<button class="download button black">Download mail list</button>
 		</div>
 		<div id="navigator-area">
 			
@@ -82,7 +90,7 @@
 
 			</div>
 				<button class="editButton button orange margin10">Edit</button>
-				<button class="removeButton button red margin10">Remove</button>
+				<button class="removeButton button red margin10">- Remove</button>
 		</div>
 	</div>
 
@@ -92,6 +100,7 @@
 			<div class="closeButton"></div>
 		</div>
 		<div class="ui-popup-overlay ui-popup-overlay_active_true" style="display:block;"></div>
+		
 		<div class="ui-popup ui-popup_active_true tau-page-entity" style="display:block;">
 			<div class="closeButton"></div>
 			<div class="tau-app i-role-application i-browser_engine_mozilla ui-popup-content tau-page-entity" role="application">

@@ -60,6 +60,26 @@ var Communicator = {
 			//console.log(obj.identifier);
 		});
 	},
+	getJSONObjTemp:function (obj) {
+
+		var	jsonData = $.getJSON('http://root.resfeber.se/holidayevents/crm/bo/search/anyagency?page=0&size=10');
+
+		jsonData.done(function(data) {
+			if (typeof data == 'string') data = $.parseJSON(data);
+		    console.log( "Real success" );
+		    console.log(data);
+
+			//console.log(obj.identifier);
+		});
+
+
+	},
+	getJSONObjAddMember: function(obj) {
+		alert('Member added');
+	},
+	getJSONObjAddAgency: function(obj) {
+		alert('Agency added');
+	},
 	getJSONObjMemberInfo: function (obj) {
 		/* Temp values*/
 
