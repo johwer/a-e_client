@@ -48,7 +48,12 @@ var Communicator = {
 			TempStore.travelInfo2 = $.map( TempStore.topListItems2, function( result2 ) {
 				TempStore.saveTopListItems2 = result2.TopListItems;
 			});
+			console.log('/////////////////');
+			console.log(TempStore.topListItems2[0].TopListItems.length);
+			console.log(TempStore.travelInfo2.length);
 
+			TempStore.setNrOfMemberfieldRows (TempStore.topListItems2[0].TopListItems.length);
+			Functionality.updateInformationBox();
 			//Listners.removeListners(obj.identifier);
 			//Display.removeInfo(obj.identifier);
 			//console.log(TempStore.saveTopListItems2);

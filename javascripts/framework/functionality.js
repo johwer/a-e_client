@@ -1,6 +1,7 @@
 var Functionality = Functionality || {
 	init: function () {
 		Communicator.getJSONObjTemp();
+		this.updateInformationBox();
         
     },
     displayAgencyField: function() {
@@ -128,6 +129,12 @@ var Functionality = Functionality || {
 			search:'Malmö',
 			identifier:'#navigator-area-member-list'
 		});
+    },
+    updateInformationBox: function() {
+    	console.log('Try to update');
+    	console.log(TempStore.getNrOfMemberfieldRows());
+    	$('#search-area .nrOfMemberfieldRows').html(TempStore.getNrOfMemberfieldRows());
+    	
     }
 
 }

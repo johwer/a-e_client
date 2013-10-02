@@ -2,6 +2,7 @@ var TempStore = TempStore  || {
     init: function () {
         this.dropdown = 'bo';
         this.clicked ='';
+        this.nrOfMemberfieldRows = 0; 
         this.typed = null;
         this.member_id = '';
         this.password = '';
@@ -344,6 +345,13 @@ var TempStore = TempStore  || {
     getMemberInfoDisplayed: function() {
     	console.log('this.memberInfoDisplayed');
     	return this.memberInfoDisplayed;
+    },
+    setNrOfMemberfieldRows: function(val) {
+    	console.log(val);
+    	this.nrOfMemberfieldRows = val;
+    },
+    getNrOfMemberfieldRows: function() {
+    	return this.nrOfMemberfieldRows;
     }
  
 }
