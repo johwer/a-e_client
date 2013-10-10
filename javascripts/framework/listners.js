@@ -28,7 +28,11 @@ var Listners = Listners || {
             identifier:'#popup .closeButton',
 
         });
-        
+        /*
+        this.addListerns({
+            identifier:'#search-area .downloadCSV',
+        });
+        */
         
     },
     editAdd: function () {
@@ -226,5 +230,6 @@ var Listners = Listners || {
     removeListners: function(obj) {
         var $this = jQuery(obj.identifier);
         $this.off();
-    }
+    },
+
 };

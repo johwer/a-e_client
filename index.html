@@ -20,34 +20,32 @@
 	<div id="main-content">
 		<div id="search-area">
 			
-
 			<div class="searchContainer inline">
-			<div class="styled-select valign-middle">
-				<select>
-					<option selected="selected" value="bo">Boxoffice.se</option>
-					<option value="ts">Ticketservice.no</option>
-					<option value="ud">Arteudland.dk</option>
-				</select>
-			
-			</div>
-			<input type="text" value="" class="search" id="search" placeholder="Search for" />
-			<button class="searchSubmit button blue" id="sumbit"><span class="magnifiSymbol"></span></button>
-			</div>
-			
-
-
-				<div class="notification info" style="position: relative;">
-					<span>INFORMATION:</span><br/>
-					Total angency: <span>123</span><br/>
-					Total agencys for <span>Boxoffice: </span><span>48</span><br/>
-					Number of users: <span class="nrOfMemberfieldRows"></span></div>
-			
+				<div class="styled-select valign-middle">
+					<select>
+						<option selected="selected" value="bo">Boxoffice.se</option>
+						<option value="ts">Ticketservice.no</option>
+						<option value="ud">Arteudland.dk</option>
+					</select>
 				
-				<div id="buttonArea">
+				</div>
+				<input type="text" value="" class="search" id="search" placeholder="Search for" />
+				<button class="searchSubmit button blue" id="sumbit"><span class="magnifiSymbol"></span></button>
+			</div>
+			
+			<div class="notification info" style="position: relative;">
+				<span>INFORMATION:</span><br/>
+				Total angency: <span>123</span><br/>
+				Total agencys for <span>Boxoffice: </span><span>48</span><br/>
+				Number of users: <span class="nrOfMemberfieldRows"></span>
+			</div>
+		
+			
+			<div id="buttonArea">
 				<button class="addAgencyButton button green  ">+ Add agency</button>
 				<button class="addMemberButton button green  ">+ Add member</button>
-				<button class="download button black">Download mail list</button>
-				</div>
+				
+			</div>
 		</div>
 		<div id="navigator-area">
 			
@@ -77,7 +75,8 @@
 						<th class="align-right">first name</th>
 						<th>last name</th>
 						<th>e-mail address</th>
-						<th>phone-number</th>
+						<th>phoneDaytime</th>
+						<th>phoneCellular</th>
 				</table>
 				
 				</div>
@@ -121,11 +120,12 @@
 	<script src="/javascripts//tools/fastfix.js"></script>
 	<script src="/javascripts/framework/tempStore.js"></script>
 	<script src="/javascripts/framework/event.js"></script>
-	<script src="/javascripts/framework/functionality.js"></script>
+	
 	<script src="/javascripts/framework/listners.js"></script>
 	<script src="/javascripts/framework/communication.js"></script>
 	
 	<script src="/javascripts/framework/display.js"></script>
+	<script src="/javascripts/framework/functionality.js"></script>
 	<script src="/javascripts/framework/main.js"></script>
 
 

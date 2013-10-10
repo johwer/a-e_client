@@ -113,7 +113,7 @@ input.search:focus{
 
 .styled-select {
    display: inline-block;
-   width: 27%;
+   width: 32%;
    height: 34px;
    overflow: hidden;
    background: url(/images/down_arrow_select.jpg) no-repeat right #666;
@@ -318,6 +318,9 @@ tr:nth-child(even) {background: #f3f6fa}
 }
 #view-area #view-area-list #tableView th, #edit-add-list #tableEditAdd th {
 	width: 13%;
+}
+#view-area #view-area-list #tableView input, #edit-add-list #tableEditAdd input {
+	width: 100%;
 }
 /*button*/
 /* button 

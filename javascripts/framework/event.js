@@ -48,8 +48,10 @@ var MyEvent = MyEvent || {
         	console.log('addButton');
         	Functionality.submitAddAgencyButton();
         }
-        
-        
+        else if (elementClass === "downloadCSV") {
+            console.log('downloadCSV');
+            Functionality.downloadCSVButton();
+        }
 	}
 
 }

@@ -16,10 +16,11 @@ var Display = Display || {
 	/*******************************************************************************************************************/
 	displayAgencyInfo: function (obj) {
 		$( obj ).each(function(index,value) {
+
 		  //$( this ).addClass( "foo" );
 		  
 		  //console.log(index);
-			 //console.log(value);
+		  //console.log(value);
 			 var self = Display;
 
 			 var tr = $('<tr></tr>', {
@@ -28,27 +29,27 @@ var Display = Display || {
 			  });
 
 			 var company = $('<td></td>', {
-			 	text: value.Provider,
+			 	text: value.companyName,
 			 	class: 'company clickable hover'
 			 }).appendTo(tr);
 
 			 var country = $('<td></td>', {
-			 	text: 'Sweden',
+			 	text: value.country,
 			 	class: 'country clickable hover'
 			 }).appendTo(tr);
 			 
 			 var city = $('<td></td>', {
-			 	text: value.DestinationCity,
+			 	text: value.city,
 			 	class: 'city clickable hover'
 			 }).appendTo(tr);
 
 			 var areaCode = $('<td></td>', {
-			 	text: value.PricePerPerson,
+			 	text: value.areaCode,
 			 	class: 'areaCode clickable hover'
 			 }).appendTo(tr);
 
 			 var address = $('<td></td>', {
-			 	text: 'Vallhallavägen 211',
+			 	text: value.address,
 			 	class: 'address clickable hover'
 			 }).appendTo(tr);
 
@@ -71,17 +72,17 @@ var Display = Display || {
 			  });
 
 			 var login = $('<td></td>', {
-			 	text: value.Provider,
+			 	text: value.login,
 			 	class: 'displayResults clickable hover'
 			 });
 
 			 var firstName	 = $('<td></td>', {
-			 	text: 'Sweden',
+			 	text: value.firstName,
 			 	class: 'displayResults clickable hover align-right'
 			 });
 			 
 			 var lastName = $('<td></td>', {
-			 	text: value.DestinationCity,
+			 	text: value.lastName,
 			 	class: 'displayResults clickable hover'
 			 });
 
@@ -89,36 +90,50 @@ var Display = Display || {
 			 	class: 'clickable hover'
 			 });
 
-			 var phoneNumber = $('<td></td>', {
+			 var phoneDaytime = $('<td></td>', {
+			 	class: 'clickable hover'
+			 	//dataset: 'THIS DATASET'
+			 });
+
+			 var phoneCellular = $('<td></td>', {
 			 	class: 'clickable hover'
 			 	//dataset: 'THIS DATASET'
 			 });
 
 			 
 			var aTag1 = $('<a>', {
-			 	href: "mailto:"+ 'johan.wergelius@resia.com',
-			 	text: 'johan.wergelius@resia.com',
+			 	href: "mailto:"+ value.email,
+			 	text: value.email,
 			 	class: 'displayResults mail'
 			 	//dataset: 'THIS DATASET'
 			 });
 
 			var aTag2 = $('<a>', {
-			 	href: "tel:"+value.PricePerPerson,
-			 	text: value.PricePerPerson,
-			 	class: 'displayResults phoneNumber'
+			 	href: "tel:"+value.phoneDaytime,
+			 	text: value.phoneDaytime,
+			 	class: 'displayResults phoneDaytime'
+			 	//dataset: 'THIS DATASET'
+			 });
+
+			var aTag3 = $('<a>', {
+			 	href: "tel:"+value.phoneCellular,
+			 	text: value.phoneCellular,
+			 	class: 'displayResults phoneCellular'
 			 	//dataset: 'THIS DATASET'
 			 });
 
 
 			aTag1.appendTo(eMail);
-			aTag2.appendTo(phoneNumber);
+			aTag2.appendTo(phoneDaytime);
+			aTag3.appendTo(phoneCellular);
 			
 			
 			login.appendTo(tr);
 			firstName.appendTo(tr);
 			lastName.appendTo(tr); 
 			eMail.appendTo(tr);
-			phoneNumber.appendTo(tr);
+			phoneDaytime.appendTo(tr);
+			phoneCellular.appendTo(tr);
 
 			tr.appendTo(self.config.containerIdentifier2);	
 		 
@@ -127,6 +142,8 @@ var Display = Display || {
 	},
 	/*******************************************************************************************************************/
 	displayMemberInfo: function() {
+		console.log(TempStore.memberInfo);
+		console.log('sdsfdsf');
 		var self = Display;
 
 		var tr1 = $('<tr></tr>', {
@@ -138,7 +155,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td1 = $('<td></td>', {
-			  	text: TempStore.member_id,
+			  	text: TempStore.memberInfo.id,
 			  	//class: 'agencyInfo'
 			});
 
@@ -151,7 +168,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td2 = $('<td></td>', {
-			  	text: TempStore.password,
+			  	text: TempStore.memberInfo.password,
 			  	//class: 'agencyInfo'
 			});
 
@@ -164,7 +181,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td3 = $('<td></td>', {
-			  	text: TempStore.encrypted_password,
+			  	text: TempStore.memberInfo.encryptedPassword,
 			  	//class: 'agencyInfo'
 			});
 
@@ -177,7 +194,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td4 = $('<td></td>', {
-			  	text: TempStore.first_name,
+			  	text: TempStore.memberInfo.memberInfo.firstName,
 			  	//class: 'agencyInfo'
 			});
 
@@ -190,7 +207,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td5 = $('<td></td>', {
-			  	text: TempStore.last_name,
+			  	text: TempStore.memberInfo.memberInfo.lastName,
 			  	//class: 'agencyInfo'
 			});
 		var tr6 = $('<tr></tr>', {
@@ -206,8 +223,8 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var a6 = $('<a></a>', {
-			  	href: "mailto:"+ TempStore.email,
-			 	text: TempStore.email,
+			  	href: "mailto:"+ TempStore.memberInfo.memberInfo.email,
+			 	text: TempStore.memberInfo.memberInfo.email,
 			});
 
 
@@ -220,7 +237,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td7 = $('<td></td>', {
-			  	text: TempStore.company_chain,
+			  	text: TempStore.memberInfo.agencyInfo.companyChain,
 			  	//class: 'agencyInfo'
 			});
 
@@ -233,7 +250,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td8 = $('<td></td>', {
-			  	text: TempStore.country,
+			  	text: TempStore.memberInfo.agencyInfo.country,
 			  	//class: 'agencyInfo'
 			});
 
@@ -246,7 +263,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td9 = $('<td></td>', {
-			  	text: TempStore.city,
+			  	text: TempStore.memberInfo.agencyInfo.city,
 			  	//class: 'agencyInfo'
 			});
 
@@ -259,7 +276,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td10 = $('<td></td>', {
-			  	text: TempStore.area_code,
+			  	text: TempStore.memberInfo.agencyInfo.areaCode,
 			  	//class: 'agencyInfo'
 			});
 
@@ -272,7 +289,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td11 = $('<td></td>', {
-			  	text: TempStore.company_name,
+			  	text: TempStore.memberInfo.agencyInfo.companyName,
 			  	//class: 'agencyInfo'
 			});
 
@@ -285,7 +302,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td12 = $('<td></td>', {
-			  	text: TempStore.address,
+			  	text: TempStore.memberInfo.agencyInfo.address,
 			  	//class: 'agencyInfo'
 			});
 
@@ -298,7 +315,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td13 = $('<td></td>', {
-			  	text: TempStore.phone_daytime,
+			  	text: TempStore.memberInfo.memberInfo.phoneDaytime,
 			  	//class: 'agencyInfo'
 			});
 
@@ -311,7 +328,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td14 = $('<td></td>', {
-			  	text: TempStore.phone_home,
+			  	text: TempStore.memberInfo.phoneHome,
 			  	//class: 'agencyInfo'
 			});
 
@@ -324,7 +341,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td15 = $('<td></td>', {
-			  	text: TempStore.phone_cellular,
+			  	text: TempStore.memberInfo.memberInfo.phoneCellular,
 			  	//class: 'agencyInfo'
 			});
 
@@ -337,7 +354,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td16 = $('<td></td>', {
-			  	text: TempStore.fax,
+			  	text: TempStore.memberInfo.fax,
 			  	//class: 'agencyInfo'
 			});
 
@@ -350,7 +367,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td17 = $('<td></td>', {
-			  	text: TempStore.birthdate,
+			  	text: TempStore.memberInfo.birthdate,
 			  	//class: 'agencyInfo'
 			});
 
@@ -363,7 +380,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td18 = $('<td></td>', {
-			  	text: TempStore.sex,
+			  	text: TempStore.memberInfo.sex,
 			  	//class: 'agencyInfo'
 			});
 
@@ -376,7 +393,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td19 = $('<td></td>', {
-			  	text: TempStore.personal_description,
+			  	text: TempStore.memberInfo.personalDescription,
 			  	//class: 'agencyInfo'
 			});
 
@@ -389,7 +406,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td20 = $('<td></td>', {
-			  	text: TempStore.civil_status,
+			  	text: TempStore.memberInfo.civilStatus,
 			  	//class: 'agencyInfo'
 			});
 
@@ -402,7 +419,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td21 = $('<td></td>', {
-			  	text: TempStore.occupation,
+			  	text: TempStore.memberInfo.occupation,
 			  	//class: 'agencyInfo'
 			});
 
@@ -415,7 +432,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td22 = $('<td></td>', {
-			  	text: TempStore.traveller_type,
+			  	text: TempStore.memberInfo.travellerType,
 			  	//class: 'agencyInfo'
 			});
 
@@ -428,7 +445,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td23 = $('<td></td>', {
-			  	text: TempStore.show_acceptance,
+			  	text: TempStore.memberInfo.showAcceptance,
 			  	//class: 'agencyInfo'
 			});
 
@@ -441,7 +458,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td24 = $('<td></td>', {
-			  	text: TempStore.last_visit,
+			  	text: TempStore.memberInfo.lastVisit,
 			  	//class: 'agencyInfo'
 			});
 
@@ -454,7 +471,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td25 = $('<td></td>', {
-			  	text: TempStore.belongs_to_site,
+			  	text: TempStore.memberInfo.belongsToSite,
 			  	//class: 'agencyInfo'
 			});
 
@@ -467,7 +484,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td26 = $('<td></td>', {
-			  	text: TempStore.regdate,
+			  	text: TempStore.memberInfo.regdate,
 			  	//class: 'agencyInfo'
 			});
 
@@ -480,7 +497,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td27 = $('<td></td>', {
-			  	text: TempStore.unregdate,
+			  	text: TempStore.memberInfo.unregdate,
 			  	//class: 'agencyInfo'
 			});
 
@@ -493,7 +510,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td28 = $('<td></td>', {
-			  	text: TempStore.vip,
+			  	text: TempStore.memberInfo.vip,
 			  	//class: 'agencyInfo'
 			});
 
@@ -506,11 +523,11 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td29 = $('<td></td>', {
-			  	text: TempStore.status,
+			  	text: TempStore.memberInfo.status,
 			  	//class: 'agencyInfo'
 			});
 
-		var tr30 = $('<tr></tr>', {
+		/*var tr30 = $('<tr></tr>', {
 			  	//text: 'Hello',
 			  	//class: 'agencyInfo'
 			});
@@ -519,9 +536,9 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td30 = $('<td></td>', {
-			  	text: TempStore.last_visit,
+			  	text: TempStore.memberInfo.last_visit,
 			  	//class: 'agencyInfo'
-			});
+			});*/
 
 		var tr31 = $('<tr></tr>', {
 			  	//text: 'Hello',
@@ -532,7 +549,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td31 = $('<td></td>', {
-			  	text: TempStore.want_email,
+			  	text: TempStore.memberInfo.wantEmail,
 			  	//class: 'agencyInfo'
 			});
 
@@ -545,7 +562,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td32 = $('<td></td>', {
-			  	text: TempStore.session_code,
+			  	text: TempStore.memberInfo.sessionCode,
 			  	//class: 'agencyInfo'
 			});
 
@@ -558,7 +575,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td33 = $('<td></td>', {
-			  	text: TempStore.updated,
+			  	text: TempStore.memberInfo.updated,
 			  	//class: 'agencyInfo'
 			});
 
@@ -571,7 +588,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td34 = $('<td></td>', {
-			  	text: TempStore.last_news_email,
+			  	text: TempStore.memberInfo.lastNewsEmail,
 			  	//class: 'agencyInfo'
 			});
 
@@ -584,7 +601,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td35 = $('<td></td>', {
-			  	text: TempStore.last_news_email_info,
+			  	text: TempStore.memberInfo.lastNewsEmailInfo,
 			  	//class: 'agencyInfo'
 			});
 
@@ -597,7 +614,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var td36 = $('<td></td>', {
-			  	text: TempStore.origin,
+			  	text: TempStore.memberInfo.origin,
 			  	//class: 'agencyInfo'
 			});
 						
@@ -633,7 +650,7 @@ var Display = Display || {
 		th27.appendTo(tr27);
 		th28.appendTo(tr28);
 		th29.appendTo(tr29);
-		th30.appendTo(tr30);
+		//th30.appendTo(tr30);
 		th31.appendTo(tr31);
 		th32.appendTo(tr32);
 		th33.appendTo(tr33);
@@ -672,7 +689,7 @@ var Display = Display || {
 		td27.appendTo(tr27);
 		td28.appendTo(tr28);
 		td29.appendTo(tr29);
-		td30.appendTo(tr30);
+		//td30.appendTo(tr30);
 		td31.appendTo(tr31);
 		td32.appendTo(tr32);
 		td33.appendTo(tr33);
@@ -713,7 +730,7 @@ var Display = Display || {
 		tr27.appendTo(self.config.containerIdentifier3);
 		tr28.appendTo(self.config.containerIdentifier3);
 		tr29.appendTo(self.config.containerIdentifier3);
-		tr30.appendTo(self.config.containerIdentifier3);
+		//tr30.appendTo(self.config.containerIdentifier3);
 		tr31.appendTo(self.config.containerIdentifier3);
 		tr32.appendTo(self.config.containerIdentifier3);
 		tr33.appendTo(self.config.containerIdentifier3);
@@ -742,7 +759,7 @@ var Display = Display || {
 		var input1 = $('<input>', {
 			  	class: 'member_id',
 			  	type:'text',
-			  	value: TempStore.member_id
+			  	value: TempStore.memberInfo.id
 			});
 
 		var tr2 = $('<tr></tr>', {
@@ -760,7 +777,7 @@ var Display = Display || {
 		var input2 = $('<input>', {
 			  	class: 'password',
 			  	type: 'text',
-			  	value: TempStore.password
+			  	value: TempStore.memberInfo.password
 			});
 
 
@@ -779,7 +796,7 @@ var Display = Display || {
 		var input3 = $('<input>', {
 			  	class: 'encrypted_password',
 			  	type: 'text',
-			  	value: TempStore.encrypted_password
+			  	value: TempStore.memberInfo.encryptedPassword
 			});
 
 		var tr4 = $('<tr></tr>', {
@@ -797,7 +814,7 @@ var Display = Display || {
 		var input4 = $('<input>', {
 			  	class: 'first_name',
 			  	type: 'text',
-			  	value: TempStore.first_name
+			  	value: TempStore.memberInfo.memberInfo.firstName
 			});
 
 		var tr5 = $('<tr></tr>', {
@@ -815,7 +832,7 @@ var Display = Display || {
 		var input5 = $('<input>', {
 			  	class: 'last_name',
 			  	type: 'text',
-			  	value: TempStore.last_name
+			  	value: TempStore.memberInfo.memberInfo.lastName
 			});
 
 		var tr6 = $('<tr></tr>', {
@@ -833,7 +850,7 @@ var Display = Display || {
 		var input6 = $('<input>', {
 			  	class: 'email',
 			  	type: 'text',
-			  	value: TempStore.email
+			  	value: TempStore.memberInfo.memberInfo.email
 			});
 		
 
@@ -853,7 +870,7 @@ var Display = Display || {
 		var input7 = $('<input>', {
 			  	class: 'email',
 			  	type: 'text',
-			  	value: TempStore.email
+			  	value: TempStore.memberInfo.agencyInfo.companyChain
 			});
 
 		var tr8 = $('<tr></tr>', {
@@ -871,7 +888,7 @@ var Display = Display || {
 		var input8 = $('<input>', {
 			  	class: 'country',
 			  	type: 'text',
-			  	value: TempStore.country
+			  	value: TempStore.memberInfo.agencyInfo.country
 			});
 
 		var tr9 = $('<tr></tr>', {
@@ -889,7 +906,7 @@ var Display = Display || {
 		var input9 = $('<input>', {
 			  	class: 'city',
 			  	type: 'text',
-			  	value: TempStore.city
+			  	value: TempStore.memberInfo.agencyInfo.city
 			});
 
 		var tr10 = $('<tr></tr>', {
@@ -907,7 +924,7 @@ var Display = Display || {
 		var input10 = $('<input>', {
 			  	class: 'area_code',
 			  	type: 'text',
-			  	value: TempStore.area_code
+			  	value: TempStore.memberInfo.agencyInfo.areaCode
 			});
 
 		var tr11 = $('<tr></tr>', {
@@ -925,7 +942,7 @@ var Display = Display || {
 		var input11 = $('<input>', {
 			  	class: 'company_name',
 			  	type: 'text',
-			  	value: TempStore.company_name
+			  	value: TempStore.memberInfo.agencyInfo.companyName
 			});
 
 		var tr12 = $('<tr></tr>', {
@@ -943,7 +960,7 @@ var Display = Display || {
 		var input12 = $('<input>', {
 			  	class: 'address',
 			  	type: 'text',
-			  	value: TempStore.address
+			  	value: TempStore.memberInfo.agencyInfo.address
 			});
 
 		var tr13 = $('<tr></tr>', {
@@ -961,7 +978,7 @@ var Display = Display || {
 		var input13 = $('<input>', {
 			  	class: 'phone_daytime',
 			  	type: 'text',
-			  	value: TempStore.phone_daytime
+			  	value: TempStore.memberInfo.memberInfo.phoneDaytime
 			});
 
 		var tr14 = $('<tr></tr>', {
@@ -979,7 +996,7 @@ var Display = Display || {
 		var input14 = $('<input>', {
 			  	class: 'phone_home',
 			  	type: 'text',
-			  	value: TempStore.phone_home
+			  	value: TempStore.memberInfo.phoneHome
 			});
 
 		var tr15 = $('<tr></tr>', {
@@ -997,7 +1014,7 @@ var Display = Display || {
 		var input15 = $('<input>', {
 			  	class: 'phone_cellular',
 			  	type: 'text',
-			  	value: TempStore.phone_cellular
+			  	value: TempStore.memberInfo.memberInfo.phoneCellular
 			});
 
 		var tr16 = $('<tr></tr>', {
@@ -1015,7 +1032,7 @@ var Display = Display || {
 		var input16 = $('<input>', {
 			  	class: 'fax',
 			  	type: 'text',
-			  	value: TempStore.fax
+			  	value: TempStore.memberInfo.fax
 			});
 
 		var tr17 = $('<tr></tr>', {
@@ -1033,7 +1050,7 @@ var Display = Display || {
 		var input17 = $('<input>', {
 			  	class: 'birthdate',
 			  	type: 'text',
-			  	value: TempStore.birthdate
+			  	value: TempStore.memberInfo.birthdate
 			});
 
 		var tr18 = $('<tr></tr>', {
@@ -1051,7 +1068,7 @@ var Display = Display || {
 		var input18 = $('<input>', {
 			  	class: 'sex',
 			  	type: 'text',
-			  	value: TempStore.sex
+			  	value: TempStore.memberInfo.sex
 			});
 
 		var tr19 = $('<tr></tr>', {
@@ -1069,7 +1086,7 @@ var Display = Display || {
 		var input19 = $('<input>', {
 			  	class: 'personal_description',
 			  	type: 'text',
-			  	value: TempStore.personal_description
+			  	value: TempStore.memberInfo.personalDescription
 			});
 
 		var tr20 = $('<tr></tr>', {
@@ -1087,7 +1104,7 @@ var Display = Display || {
 		var input20 = $('<input>', {
 			  	class: 'civil_status',
 			  	type: 'text',
-			  	value: TempStore.civil_status
+			  	value: TempStore.memberInfo.civilStatus
 			});
 
 		var tr21 = $('<tr></tr>', {
@@ -1105,7 +1122,7 @@ var Display = Display || {
 		var input21 = $('<input>', {
 			  	class: 'occupation',
 			  	type: 'text',
-			  	value: TempStore.occupation
+			  	value: TempStore.memberInfo.occupation
 			});
 
 		var tr22 = $('<tr></tr>', {
@@ -1123,7 +1140,7 @@ var Display = Display || {
 		var input22 = $('<input>', {
 			  	class: 'traveller_type',
 			  	type: 'text',
-			  	value: TempStore.traveller_type
+			  	value: TempStore.memberInfo.travellerType
 			});
 
 		var tr23 = $('<tr></tr>', {
@@ -1141,7 +1158,7 @@ var Display = Display || {
 		var input23 = $('<input>', {
 			  	class: 'show_acceptance',
 			  	type: 'text',
-			  	value: TempStore.show_acceptance
+			  	value: TempStore.memberInfo.showAcceptance
 			});
 
 		var tr24 = $('<tr></tr>', {
@@ -1159,7 +1176,7 @@ var Display = Display || {
 		var input24 = $('<input>', {
 			  	class: 'last_visit',
 			  	type: 'text',
-			  	value: TempStore.last_visit
+			  	value: TempStore.memberInfo.lastVisit
 			});
 
 		var tr25 = $('<tr></tr>', {
@@ -1177,7 +1194,7 @@ var Display = Display || {
 		var input25 = $('<input>', {
 			  	class: 'belongs_to_site',
 			  	type: 'text',
-			  	value: TempStore.belongs_to_site
+			  	value: TempStore.memberInfo.belongsToSite
 			});
 
 		var tr26 = $('<tr></tr>', {
@@ -1195,7 +1212,7 @@ var Display = Display || {
 		var input26 = $('<input>', {
 			  	class: 'regdate',
 			  	type: 'text',
-			  	value: TempStore.regdate
+			  	value: TempStore.memberInfo.regdate
 			});
 
 		var tr27 = $('<tr></tr>', {
@@ -1213,7 +1230,7 @@ var Display = Display || {
 		var input27 = $('<input>', {
 			  	class: 'unregdate',
 			  	type: 'text',
-			  	value: TempStore.unregdate
+			  	value: TempStore.memberInfo.unregdate
 			});
 
 		var tr28 = $('<tr></tr>', {
@@ -1231,7 +1248,7 @@ var Display = Display || {
 		var input28 = $('<input>', {
 			  	class: 'vip',
 			  	type: 'text',
-			  	value: TempStore.vip
+			  	value: TempStore.memberInfo.vip
 			});
 
 		var tr29 = $('<tr></tr>', {
@@ -1249,7 +1266,7 @@ var Display = Display || {
 		var input29 = $('<input>', {
 			  	class: 'status',
 			  	type: 'text',
-			  	value: TempStore.status
+			  	value: TempStore.memberInfo.status
 			});
 
 		var tr30 = $('<tr></tr>', {
@@ -1257,7 +1274,7 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var th30 = $('<th></th>', {
-			  	text: 'last_visit'
+			  	text: 'login'
 			  	//class: 'agencyInfo'
 			});
 		var td30 = $('<td></td>', {
@@ -1265,9 +1282,9 @@ var Display = Display || {
 			  	//class: 'agencyInfo'
 			});
 		var input30 = $('<input>', {
-			  	class: 'last_visit',
+			  	class: 'login',
 			  	type: 'text',
-			  	value: TempStore.last_visit
+			  	value: TempStore.memberInfo.memberInfo.login
 			});
 
 		var tr31 = $('<tr></tr>', {
@@ -1285,7 +1302,7 @@ var Display = Display || {
 		var input31 = $('<input>', {
 			  	class: 'want_email',
 			  	type: 'text',
-			  	value: TempStore.want_email
+			  	value: TempStore.memberInfo.wantEmail
 			});
 
 		var tr32 = $('<tr></tr>', {
@@ -1303,7 +1320,7 @@ var Display = Display || {
 		var input32 = $('<input>', {
 			  	class: 'session_code',
 			  	type: 'text',
-			  	value: TempStore.session_code
+			  	value: TempStore.memberInfo.sessionCode
 			});
 
 		var tr33 = $('<tr></tr>', {
@@ -1321,7 +1338,7 @@ var Display = Display || {
 		var input33 = $('<input>', {
 			  	class: 'updated',
 			  	type: 'text',
-			  	value: TempStore.updated
+			  	value: TempStore.memberInfo.updated
 			});
 
 		var tr34 = $('<tr></tr>', {
@@ -1339,7 +1356,7 @@ var Display = Display || {
 		var input34 = $('<input>', {
 			  	class: 'last_news_email',
 			  	type: 'text',
-			  	value: TempStore.last_news_email
+			  	value: TempStore.memberInfo.lastNewsEmail
 			});
 
 		var tr35 = $('<tr></tr>', {
@@ -1357,7 +1374,7 @@ var Display = Display || {
 		var input35 = $('<input>', {
 			  	class: 'last_news_email_info',
 			  	type: 'text',
-			  	value: TempStore.last_news_email_info
+			  	value: TempStore.memberInfo.lastNewsEmailInfo
 			});
 
 		var tr36 = $('<tr></tr>', {
@@ -1375,7 +1392,7 @@ var Display = Display || {
 		var input36 = $('<input>', {
 			  	class: 'origin',
 			  	type: 'text',
-			  	value: TempStore.origin
+			  	value: TempStore.memberInfo.origin
 			});
 					
 					

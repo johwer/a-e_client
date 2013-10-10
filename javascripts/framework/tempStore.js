@@ -40,6 +40,70 @@ var TempStore = TempStore  || {
         this.last_news_email_info = '';
         this.origin = '';
         this.memberInfoDisplayed = false;
+        this.csv = '';
+        this.csvButton = true;
+
+
+        /* memberInfo object */
+        this.memberInfo = {};
+        this.memberInfo.memberInfo = {};
+        this.memberInfo.agencyInfo = {};
+
+        this.memberInfo.id                          = "";
+        this.memberInfo.password                    = "";
+        this.memberInfo.encryptedPassword           = "";
+        this.memberInfo.memberInfo.firstName        = "";
+        this.memberInfo.memberInfo.lastName         = "";
+        this.memberInfo.memberInfo.email            = "";
+        this.memberInfo.memberInfo.login            = "";
+        this.memberInfo.memberInfo.phoneDaytime     = "";
+        this.memberInfo.memberInfo.phoneCellular    = "";
+        this.memberInfo.agencyInfo.companyChain     = "";
+        this.memberInfo.agencyInfo.country          = "";
+        this.memberInfo.agencyInfo.city             = "";
+        this.memberInfo.agencyInfo.areaCode         = "";
+        this.memberInfo.agencyInfo.companyName      = "";
+        this.memberInfo.agencyInfo.address          = "";
+        this.memberInfo.phoneHome                   = "";
+        this.memberInfo.fax                         = "";
+        this.memberInfo.birthdate                   = "";
+        this.memberInfo.sex                         = "";
+        this.memberInfo.personalDescription         = "";
+        this.memberInfo.civilStatus                 = "";
+        this.memberInfo.occupation                  = "";
+        this.memberInfo.travellerType               = "";
+        this.memberInfo.showAcceptance              = "";
+        this.memberInfo.lastVisit                   = "";
+        this.memberInfo.belongsToSite               = "";
+        this.memberInfo.unregdate                   = "";
+        this.memberInfo.vip                         = "";
+        this.memberInfo.status                      = "";
+        this.memberInfo.regdate                     = "";
+        this.memberInfo.wantEmail                   = "";
+        this.memberInfo.sessionCode                 = "";
+        this.memberInfo.updated                     = "";
+        this.memberInfo.lastNewsEmail               = "";
+        this.memberInfo.lastNewsEmailInfo           = "";
+        this.memberInfo.origin                      = "";
+
+    },
+    setDownloadCSVButton: function(val) {
+        console.log('set val');
+        TempStore.csvButton = val;
+        console.log(TempStore.csvButton);
+    },
+    getDownloadCSVButton: function() {
+        console.log('csvButton');
+        return TempStore.csvButton;
+    },
+    setCSV: function(val) {
+        console.log('set val');
+        TempStore.csv = val;
+        console.log(TempStore.csv);
+    },
+    getCSV: function() {
+        console.log('csv');
+        return TempStore.csv;
     },
     setDropDownVal: function(val) {
     	console.log('set val');
@@ -302,7 +366,47 @@ var TempStore = TempStore  || {
     getTypedVal: function () {
     	return TempStore.typed;
     },
-    setMemberInfo: function(obj) {
+    resetMemberInfo: function() {
+        this.memberInfo.id              = "";
+        this.memberInfo.password               = "";
+        this.memberInfo.encryptedPassword     = "";
+        this.memberInfo.memberInfo.firstName             = "";
+        this.memberInfo.memberInfo.lastName              = "";
+        this.memberInfo.memberInfo.email                  = "";
+        this.memberInfo.memberInfo.login                  ="";
+        this.memberInfo.agencyInfo.companyChain          = "";
+        this.memberInfo.agencyInfo.country                = "";
+        this.memberInfo.agencyInfo.city                   = "";
+        this.memberInfo.agencyInfo.areaCode              = "";
+        this.memberInfo.agencyInfo.companyName           = "";
+        this.memberInfo.agencyInfo.address                = "";
+        this.memberInfo.phoneDaytime          = "";
+        this.memberInfo.phoneHome             = "";
+        this.memberInfo.phoneCellular         = "";
+        this.memberInfo.fax                    = "";
+        this.memberInfo.birthdate              = "";
+        this.memberInfo.sex                    = "";
+        this.memberInfo.personalDescription   = "";
+        this.memberInfo.civilStatus           = "";
+        this.memberInfo.occupation             = "";
+        this.memberInfo.travellerType         = "";
+        this.memberInfo.showAcceptance        = "";
+        this.memberInfo.lastVisit             = "";
+        this.memberInfo.belongsToSite        = "";
+        this.memberInfo.unregdate              = "";
+        this.memberInfo.vip                    = "";
+        this.memberInfo.status                 = "";
+        this.memberInfo.regdate                = "";
+        this.memberInfo.wantEmail             = "";
+        this.memberInfo.sessionCode           = "";
+        this.memberInfo.updated                = "";
+        this.memberInfo.lastNewsEmail        = "";
+        this.memberInfo.lastNewsEmailInfo   = "";
+        this.memberInfo.origin                 = "";
+        console.log('reset');
+        
+    },
+    /*setMemberInfo: function(obj) {
     	this.member_id 				= obj.member_id;
         this.password 				= obj.password;
         this.encrypted_password 	= obj.encrypted_password;
@@ -338,7 +442,7 @@ var TempStore = TempStore  || {
         this.last_news_email 		= obj.last_news_email;
         this.last_news_email_info 	= obj.last_news_email_info;
         this.origin 				= obj.origin;
-    },
+    },*/
     setMemberInfoDisplayed: function(val) {
     	this.memberInfoDisplayed = val;
     },
