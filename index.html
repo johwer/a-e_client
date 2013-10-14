@@ -29,7 +29,7 @@
 					</select>
 				
 				</div>
-				<input type="text" value="" class="search" id="search" placeholder="Search for" />
+				<input type="search" value="" class="search" id="search" placeholder="Search for" results/>
 				<button class="searchSubmit button blue" id="sumbit"><span class="magnifiSymbol"></span></button>
 			</div>
 			
@@ -105,11 +105,13 @@
 		
 		<div class="ui-popup ui-popup_active_true tau-page-entity" style="display:block;">
 			<div class="closeButton"></div>
-			<div class="tau-app i-role-application i-browser_engine_mozilla ui-popup-content tau-page-entity" role="application">
+			<div class="tau-app i-role-application i-browser_engine_mozilla ui-popup-content tau-page-entity" role="application"><form>
 				<div id="edit-add-list">
 					<table border="0" id="tableEditAdd">
+						
+					
 					</table>
-				</div>
+				</div></form>
 			</div>
 		</div>
 	</div>
@@ -117,8 +119,10 @@
 	<!-- Include Scripts -->
 	
 	<!--<script src="/javascripts//tools/jQuery.event.fix.js"></script>-->
-	<script src="/javascripts//tools/fastfix.js"></script>
+	<script src="/javascripts/tools/fastfix.js"></script>
+	<script src="/javascripts/framework/global.js"></script>
 	<script src="/javascripts/framework/tempStore.js"></script>
+	<script src="/javascripts/framework/validation.js"></script>
 	<script src="/javascripts/framework/event.js"></script>
 	
 	<script src="/javascripts/framework/listners.js"></script>

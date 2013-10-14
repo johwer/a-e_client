@@ -123,241 +123,252 @@ var TempStore = TempStore  || {
     },
     setMember_id: function (val) {
     	console.log(val);
-    	TempStore.member_id = val;
+    	TempStore.memberInfo.id = val;
     },
     getMember_id: function (val) {
-    	return TempStore.member_id;
+    	return TempStore.memberInfo.id;
     },
     setPassword: function (val) {
     	console.log(val);
-    	TempStore.password = val;
+    	TempStore.memberInfo.password = val;
     },
     getPassword: function (val) {
-    	return TempStore.password;
+    	return TempStore.memberInfo.password;
     },
     setEncrypted_password: function (val) {
     	console.log(val);
-    	TempStore.encrypted_password = val;
+    	TempStore.memberInfo.encryptedPassword = val;
     },
     getEncrypted_password: function (val) {
-    	return TempStore.encrypted_password;
+    	return TempStore.memberInfo.encryptedPassword;
     },
     setFirst_name: function (val) {
     	console.log(val);
-    	TempStore.first_name = val;
+    	TempStore.memberInfo.memberInfo.firstName = val;
     },
     getFirst_name: function (val) {
-    	return TempStore.first_name;
+    	return TempStore.memberInfo.memberInfo.firstName;
     },
     setLast_name: function (val) {
     	console.log(val);
-    	TempStore.last_name = val;
+    	TempStore.memberInfo.memberInfo.lastName = val;
     },
-    getLast_name: function (val) {
-    	return TempStore.last_name;
+    setLogin: function (val) {
+        console.log(val);
+        TempStore.memberInfo.memberInfo.login = val;
+    },
+    getLogin: function (val) {
+    	return TempStore.memberInfo.memberInfo.login;
     },
     setEmail: function (val) {
     	console.log(val);
-    	TempStore.email = val;
+    	TempStore.memberInfo.memberInfo.email = val;
     },
     getEmail: function (val) {
-    	return TempStore.email;
+    	return TempStore.memberInfo.memberInfo.email;
     },
     setCountry: function (val) {
     	console.log(val);
-    	TempStore.country = val;
+    	TempStore.memberInfo.agencyInfo.country = val;
     },
     getCountry: function (val) {
-    	return TempStore.country;
+    	return TempStore.memberInfo.agencyInfo.country;
     },
     setCity: function (val) {
     	console.log(val);
-    	TempStore.city = val;
+    	TempStore.memberInfo.agencyInfo.city = val;
     },
     getCity: function (val) {
-    	return TempStore.city;
+    	return TempStore.memberInfo.agencyInfo.city;
     },
     setArea_code: function (val) {
     	console.log(val);
-    	TempStore.area_code = val;
+    	TempStore.memberInfo.agencyInfo.areaCode = val;
     },
     getArea_code: function (val) {
-    	return TempStore.area_code;
+    	return TempStore.memberInfo.agencyInfo.areaCode;
+    },
+    setCompanyChain: function (val) {
+    	console.log(val);
+    	TempStore.memberInfo.agencyInfo.companyChain = val;
+    },
+    getCompanyChain: function (val) {
+    	return TempStore.memberInfo.agencyInfo.companyChain;
     },
     setCompany_name: function (val) {
-    	console.log(val);
-    	TempStore.company_name = val;
+        console.log(val);
+        TempStore.memberInfo.agencyInfo.companyName = val;
     },
     getCompany_name: function (val) {
-    	return TempStore.company_name;
+        return TempStore.memberInfo.agencyInfo.companyName;
     },
     setAddress: function (val) {
     	console.log(val);
-    	TempStore.address = val;
+    	TempStore.memberInfo.agencyInfoaddress.address = val;
     },
     getAddress: function (val) {
-    	return TempStore.address;
+    	return TempStore.memberInfo.agencyInfo.address;
     },
     setPhone_daytime: function (val) {
     	console.log(val);
-    	TempStore.phone_daytime = val;
+    	TempStore.memberInfo.memberInfo.phoneDaytime = val;
     },
     getPhone_daytime: function (val) {
-    	return TempStore.phone_daytime;
+    	return TempStore.memberInfo.memberInfo.phoneDaytime;
     },
     setPhone_home: function (val) {
     	console.log(val);
-    	TempStore.phone_home = val;
+    	TempStore.memberInfo.phoneHome = val;
     },
     getPhone_home: function (val) {
-    	return TempStore.phone_home;
+    	return TempStore.memberInfo.phoneHome;
     },
     setPhone_cellular: function (val) {
     	console.log(val);
-    	TempStore.phone_cellular = val;
+    	TempStore.memberInfo.memberInfo.phoneCellular = val;
     },
     getPhone_cellular: function (val) {
-    	return TempStore.phone_cellular;
+    	return TempStore.memberInfo.memberInfo.phoneCellular;
     },
     setFax: function (val) {
     	console.log(val);
-    	TempStore.fax = val;
+    	TempStore.memberInfo.fax = val;
     },
     getFax: function (val) {
-    	return TempStore.fax;
+    	return TempStore.memberInfo.fax;
     },
     setBirthdate: function (val) {
     	console.log(val);
-    	TempStore.birthdate = val;
+    	TempStore.memberInfo.birthdate = val;
     },
     getBirthdate: function (val) {
-    	return TempStore.birthdate;
+    	return TempStore.memberInfo.birthdate;
     },
     setSex: function (val) {
     	console.log(val);
-    	TempStore.sex = val;
+    	TempStore.memberInfo.sex = val;
     },
     getSex: function (val) {
-    	return TempStore.sex;
+    	return TempStore.memberInfo.sex;
     },
     setCivil_status: function (val) {
     	console.log(val);
-    	TempStore.civil_status = val;
+    	TempStore.memberInfo.civilStatus = val;
     },
     getCivil_status: function (val) {
-    	return TempStore.civil_status;
+    	return TempStore.memberInfo.civilStatus;
     },
     setOccupation: function (val) {
     	console.log(val);
-    	TempStore.occupation = val;
+    	TempStore.memberInfo.occupation = val;
     },
     getOccupation: function (val) {
-    	return TempStore.occupation;
+    	return TempStore.memberInfo.occupation;
     },
     setTraveller_type: function (val) {
     	console.log(val);
-    	TempStore.traveller_type = val;
+    	TempStore.memberInfo.travellerType = val;
     },
     getTraveller_type: function (val) {
-    	return TempStore.traveller_type;
+    	return TempStore.memberInfo.travellerType;
     },
     setPersonal_description: function (val) {
     	console.log(val);
-    	TempStore.personal_description = val;
+    	TempStore.memberInfo.personalDescription = val;
     },
     getPersonal_description: function (val) {
-    	return TempStore.personal_description;
+    	return TempStore.memberInfo.personalDescription;
     },
     setShow_acceptance: function (val) {
     	console.log(val);
-    	TempStore.show_acceptance = val;
+    	TempStore.memberInfo.showAcceptance = val;
     },
     getShow_acceptance: function (val) {
-    	return TempStore.show_acceptance;
+    	return TempStore.memberInfo.showAcceptance;
     },
     setLast_visit: function (val) {
     	console.log(val);
-    	TempStore.last_visit = val;
+    	TempStore.memberInfo.lastVisit = val;
     },
     getLast_visit: function (val) {
-    	return TempStore.last_visit;
+    	return TempStore.memberInfo.lastVisit;
     },
     setBelongs_to_site: function (val) {
     	console.log(val);
-    	TempStore.belongs_to_site = val;
+    	TempStore.memberInfo.belongsToSite = val;
     },
     getBelongs_to_site: function (val) {
-    	return TempStore.belongs_to_site;
+    	return TempStore.memberInfo.belongsToSite;
     },
     setUnregdate: function (val) {
     	console.log(val);
-    	TempStore.unregdate = val;
+    	TempStore.memberInfo.unregdate = val;
     },
     getUnregdate: function (val) {
-    	return TempStore.unregdate;
+    	return TempStore.memberInfo.unregdate;
     },
     setVip: function (val) {
     	console.log(val);
-    	TempStore.vip = val;
+    	TempStore.memberInfo.vip = val;
     },
     getVip: function (val) {
-    	return TempStore.vip;
+    	return TempStore.memberInfo.vip;
     },
     setStatus: function (val) {
     	console.log(val);
-    	TempStore.status = val;
+    	TempStore.memberInfo.status = val;
     },
     getStatus: function (val) {
-    	return TempStore.status;
+    	return TempStore.memberInfo.status;
     },
     setRegdate: function (val) {
     	console.log(val);
-    	TempStore.regdate = val;
+    	TempStore.memberInfo.regdate = val;
     },
     getRegdate: function (val) {
-    	return TempStore.regdate;
+    	return TempStore.memberInfo.regdate;
     },
     setWant_email: function (val) {
     	console.log(val);
-    	TempStore.want_email = val;
+    	TempStore.memberInfo.wantEmail = val;
     },
     getWant_email: function (val) {
-    	return TempStore.want_email;
+    	return TempStore.memberInfo.wantEmail;
     },
     setSession_code: function (val) {
     	console.log(val);
-    	TempStore.session_code = val;
+    	TempStore.memberInfo.sessionCode = val;
     },
     getSession_code: function (val) {
-    	return TempStore.session_code;
+    	return TempStore.memberInfo.sessionCode;
     },
     setUpdated: function (val) {
     	console.log(val);
-    	TempStore.updated = val;
+    	TempStore.memberInfo.updated = val;
     },
     getUpdated: function (val) {
-    	return TempStore.updated;
+    	return TempStore.memberInfo.updated;
     },
     setLast_news_email: function (val) {
     	console.log(val);
-    	TempStore.last_news_email = val;
+    	TempStore.memberInfo.lastNewsEmail = val;
     },
     getLast_news_email: function (val) {
-    	return TempStore.last_news_email;
+    	return TempStore.memberInfo.lastNewsEmail;
     },
     setLast_news_email_info: function (val) {
     	console.log(val);
-    	TempStore.last_news_email_info = val;
+    	TempStore.memberInfo.lastNewsEmailInfo = val;
     },
     getLast_news_email_info: function (val) {
-    	return TempStore.last_news_email_info;
+    	return TempStore.memberInfo.lastNewsEmailInfo;
     },
     setOrigin: function (val) {
     	console.log(val);
-    	TempStore.origin = val;
+    	TempStore.memberInfo.origin = val;
     },
     getOrigin: function (val) {
-    	return TempStore.origin;
+    	return TempStore.memberInfo.origin;
     },
     setTypedVal: function(val){
     	console.log(val);
@@ -367,42 +378,42 @@ var TempStore = TempStore  || {
     	return TempStore.typed;
     },
     resetMemberInfo: function() {
-        this.memberInfo.id              = "";
-        this.memberInfo.password               = "";
-        this.memberInfo.encryptedPassword     = "";
-        this.memberInfo.memberInfo.firstName             = "";
-        this.memberInfo.memberInfo.lastName              = "";
-        this.memberInfo.memberInfo.email                  = "";
-        this.memberInfo.memberInfo.login                  ="";
-        this.memberInfo.agencyInfo.companyChain          = "";
-        this.memberInfo.agencyInfo.country                = "";
-        this.memberInfo.agencyInfo.city                   = "";
-        this.memberInfo.agencyInfo.areaCode              = "";
-        this.memberInfo.agencyInfo.companyName           = "";
-        this.memberInfo.agencyInfo.address                = "";
-        this.memberInfo.phoneDaytime          = "";
-        this.memberInfo.phoneHome             = "";
-        this.memberInfo.phoneCellular         = "";
-        this.memberInfo.fax                    = "";
-        this.memberInfo.birthdate              = "";
-        this.memberInfo.sex                    = "";
-        this.memberInfo.personalDescription   = "";
-        this.memberInfo.civilStatus           = "";
-        this.memberInfo.occupation             = "";
-        this.memberInfo.travellerType         = "";
-        this.memberInfo.showAcceptance        = "";
-        this.memberInfo.lastVisit             = "";
-        this.memberInfo.belongsToSite        = "";
-        this.memberInfo.unregdate              = "";
-        this.memberInfo.vip                    = "";
-        this.memberInfo.status                 = "";
-        this.memberInfo.regdate                = "";
-        this.memberInfo.wantEmail             = "";
-        this.memberInfo.sessionCode           = "";
-        this.memberInfo.updated                = "";
-        this.memberInfo.lastNewsEmail        = "";
-        this.memberInfo.lastNewsEmailInfo   = "";
-        this.memberInfo.origin                 = "";
+        this.memberInfo.id                          = "";
+        this.memberInfo.password                    = "";
+        this.memberInfo.encryptedPassword           = "";
+        this.memberInfo.memberInfo.firstName        = "";
+        this.memberInfo.memberInfo.lastName         = "";
+        this.memberInfo.memberInfo.email            = "";
+        this.memberInfo.memberInfo.login            = "";
+        this.memberInfo.memberInfo.phoneDaytime     = "";
+        this.memberInfo.memberInfo.phoneCellular    = "";
+        this.memberInfo.agencyInfo.companyChain     = "";
+        this.memberInfo.agencyInfo.country          = "";
+        this.memberInfo.agencyInfo.city             = "";
+        this.memberInfo.agencyInfo.areaCode         = "";
+        this.memberInfo.agencyInfo.companyName      = "";
+        this.memberInfo.agencyInfo.address          = "";
+        this.memberInfo.phoneHome                   = "";
+        this.memberInfo.fax                         = "";
+        this.memberInfo.birthdate                   = "";
+        this.memberInfo.sex                         = "";
+        this.memberInfo.personalDescription         = "";
+        this.memberInfo.civilStatus                 = "";
+        this.memberInfo.occupation                  = "";
+        this.memberInfo.travellerType               = "";
+        this.memberInfo.showAcceptance              = "";
+        this.memberInfo.lastVisit                   = "";
+        this.memberInfo.belongsToSite               = "";
+        this.memberInfo.unregdate                   = "";
+        this.memberInfo.vip                         = "";
+        this.memberInfo.status                      = "";
+        this.memberInfo.regdate                     = "";
+        this.memberInfo.wantEmail                   = "";
+        this.memberInfo.sessionCode                 = "";
+        this.memberInfo.updated                     = "";
+        this.memberInfo.lastNewsEmail               = "";
+        this.memberInfo.lastNewsEmailInfo           = "";
+        this.memberInfo.origin                      = "";
         console.log('reset');
         
     },

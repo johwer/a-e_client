@@ -74,6 +74,8 @@ var Functionality = Functionality || {
     searchSubmitButton: function() {
     	var _this = this;
     	if(TempStore.getTypedVal()) {
+    		console.log('TempStore.getTypedVal()');
+    		console.log(TempStore.getTypedVal());
 	    	console.log('display fields');
 	    	//this.displayMemberField();
 	    	console.log('display agency');

@@ -82,6 +82,13 @@ input.search{
 }
 
 
+.valid {
+	border: 1px solid green;
+}
+ 
+.invalid {
+	border: 1px solid red;
+}
 
 
 input#search {

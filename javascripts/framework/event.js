@@ -4,7 +4,9 @@ var MyEvent = MyEvent || {
 		console.log('JIPOP');
 		console.log(event);
 		var elementInnerText    = event.originalEvent.target.innerHTML,
-                elementClass    = event.originalEvent.target.classList[0];
+                elementClass    = event.originalEvent.target.classList[0],
+                elementId       = event.originalEvent.target.id,
+                elmenteValue    = event.originalEvent.target.value;
 
         //Store for global value last clicked text
         TempStore.setClickedVal(elementInnerText);
@@ -20,7 +22,7 @@ var MyEvent = MyEvent || {
             console.log("displayResults");
             Functionality.displayMemberInfo();
         }
-        else if (elementClass === "searchSubmit") {
+        else if (elementClass === "searchSubmit" || elementClass === "magnifiSymbol") {
         	console.log('submit');
         	Functionality.searchSubmitButton();
         }
@@ -52,6 +54,15 @@ var MyEvent = MyEvent || {
             console.log('downloadCSV');
             Functionality.downloadCSVButton();
         }
+        else if(elementClass === "editAdd"){
+            console.log ('Edit class fund');
+            if (elementId === "phone_home" || elementId === "phone_daytime" || elementId === "phone_cellular" || elementId === "fax") {
+                console.log('phone_home');
+                Validation.phoneNumber(elementId, elmenteValue);
+            }
+
+        }
+        
 	}
 
 }

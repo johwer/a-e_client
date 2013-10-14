@@ -24,7 +24,7 @@ var Display = Display || {
 			 var self = Display;
 
 			 var tr = $('<tr></tr>', {
-			  	//text: 'Hello',
+			  	
 			  	class: 'agencyInfo'
 			  });
 
@@ -67,7 +67,7 @@ var Display = Display || {
 			 var self = Display;
 
 			 var tr = $('<tr></tr>', {
-			  	//text: 'Hello',
+			  	
 			  	class: 'agencyInfo'
 			  });
 
@@ -92,12 +92,12 @@ var Display = Display || {
 
 			 var phoneDaytime = $('<td></td>', {
 			 	class: 'clickable hover'
-			 	//dataset: 'THIS DATASET'
+			 	
 			 });
 
 			 var phoneCellular = $('<td></td>', {
 			 	class: 'clickable hover'
-			 	//dataset: 'THIS DATASET'
+			 	
 			 });
 
 			 
@@ -105,21 +105,21 @@ var Display = Display || {
 			 	href: "mailto:"+ value.email,
 			 	text: value.email,
 			 	class: 'displayResults mail'
-			 	//dataset: 'THIS DATASET'
+			 	
 			 });
 
 			var aTag2 = $('<a>', {
 			 	href: "tel:"+value.phoneDaytime,
 			 	text: value.phoneDaytime,
 			 	class: 'displayResults phoneDaytime'
-			 	//dataset: 'THIS DATASET'
+			 	
 			 });
 
 			var aTag3 = $('<a>', {
 			 	href: "tel:"+value.phoneCellular,
 			 	text: value.phoneCellular,
 			 	class: 'displayResults phoneCellular'
-			 	//dataset: 'THIS DATASET'
+			 	
 			 });
 
 
@@ -147,80 +147,74 @@ var Display = Display || {
 		var self = Display;
 
 		var tr1 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th1 = $('<th></th>', {
 			  	text: 'member_id',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td1 = $('<td></td>', {
 			  	text: TempStore.memberInfo.id,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr2 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th2 = $('<th></th>', {
 			  	text: 'password',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td2 = $('<td></td>', {
 			  	text: TempStore.memberInfo.password,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr3 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th3 = $('<th></th>', {
 			  	text: 'encrypted_password',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td3 = $('<td></td>', {
 			  	text: TempStore.memberInfo.encryptedPassword,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr4 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th4 = $('<th></th>', {
 			  	text: 'first_name',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td4 = $('<td></td>', {
 			  	text: TempStore.memberInfo.memberInfo.firstName,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr5 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th5 = $('<th></th>', {
 			  	text: 'last_name',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td5 = $('<td></td>', {
 			  	text: TempStore.memberInfo.memberInfo.lastName,
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var tr6 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th6 = $('<th></th>', {
 			  	text: 'email',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td6 = $('<td></td>', {
-			  	//text: 'Johan',
-			  	//class: 'agencyInfo'
+			 
+			  	
 			});
 		var a6 = $('<a></a>', {
 			  	href: "mailto:"+ TempStore.memberInfo.memberInfo.email,
@@ -229,393 +223,363 @@ var Display = Display || {
 
 
 		var tr7 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th7 = $('<th></th>', {
 			  	text: 'company_chain',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td7 = $('<td></td>', {
 			  	text: TempStore.memberInfo.agencyInfo.companyChain,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr8 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th8 = $('<th></th>', {
 			  	text: 'country',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td8 = $('<td></td>', {
 			  	text: TempStore.memberInfo.agencyInfo.country,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr9 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th9 = $('<th></th>', {
 			  	text: 'city',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td9 = $('<td></td>', {
 			  	text: TempStore.memberInfo.agencyInfo.city,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr10 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th10 = $('<th></th>', {
 			  	text: 'area_code',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td10 = $('<td></td>', {
 			  	text: TempStore.memberInfo.agencyInfo.areaCode,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr11 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th11 = $('<th></th>', {
 			  	text: 'company_name',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td11 = $('<td></td>', {
 			  	text: TempStore.memberInfo.agencyInfo.companyName,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr12 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th12 = $('<th></th>', {
 			  	text: 'address',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td12 = $('<td></td>', {
 			  	text: TempStore.memberInfo.agencyInfo.address,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr13 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th13 = $('<th></th>', {
 			  	text: 'phone_daytime',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td13 = $('<td></td>', {
 			  	text: TempStore.memberInfo.memberInfo.phoneDaytime,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr14 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th14 = $('<th></th>', {
 			  	text: 'phone_home',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td14 = $('<td></td>', {
 			  	text: TempStore.memberInfo.phoneHome,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr15 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th15 = $('<th></th>', {
 			  	text: 'phone_cellular',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td15 = $('<td></td>', {
 			  	text: TempStore.memberInfo.memberInfo.phoneCellular,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr16 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th16 = $('<th></th>', {
 			  	text: 'fax',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td16 = $('<td></td>', {
 			  	text: TempStore.memberInfo.fax,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr17 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th17 = $('<th></th>', {
 			  	text: 'birthdate',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td17 = $('<td></td>', {
 			  	text: TempStore.memberInfo.birthdate,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr18 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th18 = $('<th></th>', {
 			  	text: 'sex',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td18 = $('<td></td>', {
 			  	text: TempStore.memberInfo.sex,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr19 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th19 = $('<th></th>', {
 			  	text: 'personal_description',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td19 = $('<td></td>', {
 			  	text: TempStore.memberInfo.personalDescription,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr20 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th20 = $('<th></th>', {
 			  	text: 'civil_status',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td20 = $('<td></td>', {
 			  	text: TempStore.memberInfo.civilStatus,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr21 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th21 = $('<th></th>', {
 			  	text: 'occupation',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td21 = $('<td></td>', {
 			  	text: TempStore.memberInfo.occupation,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr22 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th22 = $('<th></th>', {
 			  	text: 'traveller_type',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td22 = $('<td></td>', {
 			  	text: TempStore.memberInfo.travellerType,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr23 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th23 = $('<th></th>', {
 			  	text: 'show_acceptance',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td23 = $('<td></td>', {
 			  	text: TempStore.memberInfo.showAcceptance,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr24 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th24 = $('<th></th>', {
 			  	text: 'last_visit',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td24 = $('<td></td>', {
 			  	text: TempStore.memberInfo.lastVisit,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr25 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th25 = $('<th></th>', {
 			  	text: 'belongs_to_site',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td25 = $('<td></td>', {
 			  	text: TempStore.memberInfo.belongsToSite,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr26 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th26 = $('<th></th>', {
 			  	text: 'regdate',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td26 = $('<td></td>', {
 			  	text: TempStore.memberInfo.regdate,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr27 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th27 = $('<th></th>', {
 			  	text: 'unregdate',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td27 = $('<td></td>', {
 			  	text: TempStore.memberInfo.unregdate,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr28 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th28 = $('<th></th>', {
 			  	text: 'vip',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td28 = $('<td></td>', {
 			  	text: TempStore.memberInfo.vip,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr29 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th29 = $('<th></th>', {
 			  	text: 'status',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td29 = $('<td></td>', {
 			  	text: TempStore.memberInfo.status,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		/*var tr30 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th30 = $('<th></th>', {
 			  	text: 'last_visit',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td30 = $('<td></td>', {
 			  	text: TempStore.memberInfo.last_visit,
-			  	//class: 'agencyInfo'
+			  	
 			});*/
 
 		var tr31 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th31 = $('<th></th>', {
 			  	text: 'want_email',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td31 = $('<td></td>', {
 			  	text: TempStore.memberInfo.wantEmail,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr32 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th32 = $('<th></th>', {
 			  	text: 'session_code',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td32 = $('<td></td>', {
 			  	text: TempStore.memberInfo.sessionCode,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr33 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th33 = $('<th></th>', {
 			  	text: 'updated',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td33 = $('<td></td>', {
 			  	text: TempStore.memberInfo.updated,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr34 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th34 = $('<th></th>', {
 			  	text: 'last_news_email',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td34 = $('<td></td>', {
 			  	text: TempStore.memberInfo.lastNewsEmail,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr35 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th35 = $('<th></th>', {
 			  	text: 'last_news_email_info',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td35 = $('<td></td>', {
 			  	text: TempStore.memberInfo.lastNewsEmailInfo,
-			  	//class: 'agencyInfo'
+			  	
 			});
 
 		var tr36 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th36 = $('<th></th>', {
 			  	text: 'origin',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td36 = $('<td></td>', {
 			  	text: TempStore.memberInfo.origin,
-			  	//class: 'agencyInfo'
+			  	
 			});
 						
 					
@@ -745,652 +709,651 @@ var Display = Display || {
 		var self = Display;
 
 		var tr1 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th1 = $('<th></th>', {
 			  	text: 'member_id'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td1 = $('<td></td>', {
-			  	//text: TempStore.member_id,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input1 = $('<input>', {
-			  	class: 'member_id',
+			  	class: 'editAdd',
+			  	id: 'member_id',
 			  	type:'text',
 			  	value: TempStore.memberInfo.id
 			});
 
 		var tr2 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th2 = $('<th></th>', {
 			  	text: 'password'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td2 = $('<td></td>', {
-			  	//text: TempStore.password,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input2 = $('<input>', {
-			  	class: 'password',
+			  	class: 'editAdd',
+			  	id: 'password',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.password
 			});
 
 
 		var tr3 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th3 = $('<th></th>', {
 			  	text: 'encrypted_password'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td3 = $('<td></td>', {
-			  	//text: TempStore.encrypted_password,
-			  	//class: 'agencyInfo'
+		
+			  	
 			});
 		var input3 = $('<input>', {
-			  	class: 'encrypted_password',
+			  	class: 'editAdd',
+			  	id: 'encrypted_password',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.encryptedPassword
 			});
 
 		var tr4 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th4 = $('<th></th>', {
 			  	text: 'first_name'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td4 = $('<td></td>', {
-			  	//text: TempStore.first_name,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input4 = $('<input>', {
-			  	class: 'first_name',
+			  	class: 'editAdd',
+			  	id: 'first_name',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.memberInfo.firstName
 			});
 
 		var tr5 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th5 = $('<th></th>', {
 			  	text: 'last_name'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td5 = $('<td></td>', {
-			  	//text: TempStore.last_name,
-			  	//class: 'agencyInfo'
+			  
+			  	
 			});
 		var input5 = $('<input>', {
-			  	class: 'last_name',
+			  	class: 'editAdd',
+			  	id: 'last_name',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.memberInfo.lastName
 			});
 
 		var tr6 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th6 = $('<th></th>', {
 			  	text: 'email'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td6 = $('<td></td>', {
-			  	//text: 'Johan',
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input6 = $('<input>', {
-			  	class: 'email',
-			  	type: 'text',
+			  	class: 'editAdd',
+			  	id: 'email',
+			  	type: 'email',
+			  	required: true,
 			  	value: TempStore.memberInfo.memberInfo.email
 			});
 		
 
 
 		var tr7 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th7 = $('<th></th>', {
 			  	text: 'company_chain'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td7 = $('<td></td>', {
-			  	//text: TempStore.company_chain,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input7 = $('<input>', {
-			  	class: 'email',
+			  	class: 'editAdd',
+			  	id: 'company_chain',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.agencyInfo.companyChain
 			});
 
 		var tr8 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th8 = $('<th></th>', {
 			  	text: 'country'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td8 = $('<td></td>', {
-			  	//text: TempStore.country,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input8 = $('<input>', {
-			  	class: 'country',
+			  	class: 'editAdd',
+			  	id: 'country',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.agencyInfo.country
 			});
 
 		var tr9 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th9 = $('<th></th>', {
 			  	text: 'city'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td9 = $('<td></td>', {
-			  	//text: TempStore.city,
-			  	//class: 'agencyInfo'
+			  
 			});
 		var input9 = $('<input>', {
-			  	class: 'city',
+			  	class: 'editAdd',
+			  	id: 'city',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.agencyInfo.city
 			});
 
 		var tr10 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th10 = $('<th></th>', {
 			  	text: 'area_code'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td10 = $('<td></td>', {
-			  	//text: TempStore.area_code,
-			  	//class: 'agencyInfo'
+			  
 			});
 		var input10 = $('<input>', {
-			  	class: 'area_code',
+			  	class: 'editAdd',
+			  	id: 'area_code',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.agencyInfo.areaCode
 			});
 
 		var tr11 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th11 = $('<th></th>', {
 			  	text: 'company_name'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td11 = $('<td></td>', {
-			  	//text: TempStore.company_name,
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var input11 = $('<input>', {
-			  	class: 'company_name',
+			  	class: 'editAdd',
+			  	id: 'company_name',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.agencyInfo.companyName
 			});
 
 		var tr12 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th12 = $('<th></th>', {
 			  	text: 'address'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td12 = $('<td></td>', {
-			  	//text: TempStore.address,
-			  	//class: 'agencyInfo'
+			  
+			  	
 			});
 		var input12 = $('<input>', {
-			  	class: 'address',
+			  	class: 'editAdd',
+			  	id: 'address',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.agencyInfo.address
 			});
 
 		var tr13 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th13 = $('<th></th>', {
 			  	text: 'phone_daytime'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td13 = $('<td></td>', {
-			  	//text: TempStore.phone_daytime,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input13 = $('<input>', {
-			  	class: 'phone_daytime',
-			  	type: 'text',
+			  	class: 'editAdd',
+			  	id: 'phone_daytime',
+			  	type: 'tel',
+			  	pattern: '',
 			  	value: TempStore.memberInfo.memberInfo.phoneDaytime
 			});
 
 		var tr14 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th14 = $('<th></th>', {
 			  	text: 'phone_home'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td14 = $('<td></td>', {
-			  	//text: TempStore.phone_home,
-			  	//class: 'agencyInfo'
+			  
+			  	
 			});
 		var input14 = $('<input>', {
-			  	class: 'phone_home',
-			  	type: 'text',
+			  	class: 'editAdd',
+			  	id: 'phone_home',
+			  	type: 'tel',
 			  	value: TempStore.memberInfo.phoneHome
 			});
 
 		var tr15 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th15 = $('<th></th>', {
 			  	text: 'phone_cellular'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td15 = $('<td></td>', {
-			  	//text: TempStore.phone_cellular,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input15 = $('<input>', {
-			  	class: 'phone_cellular',
-			  	type: 'text',
+			  	class: 'editAdd',
+			  	id: 'phone_cellular',
+			  	type: 'tel',
 			  	value: TempStore.memberInfo.memberInfo.phoneCellular
 			});
 
 		var tr16 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th16 = $('<th></th>', {
 			  	text: 'fax'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td16 = $('<td></td>', {
-			  	//text: TempStore.fax,
-			  	//class: 'agencyInfo'
+			  
+			  	
 			});
 		var input16 = $('<input>', {
-			  	class: 'fax',
-			  	type: 'text',
+			  	class: 'editAdd',
+			  	id: 'fax',
+			  	type: 'tel',
 			  	value: TempStore.memberInfo.fax
 			});
 
 		var tr17 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th17 = $('<th></th>', {
 			  	text: 'birthdate'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td17 = $('<td></td>', {
-			  	//text: TempStore.birthdate,
-			  	//class: 'agencyInfo'
+			  
+			  	
 			});
 		var input17 = $('<input>', {
-			  	class: 'birthdate',
+			  	class: 'editAdd',
+			  	id: 'birthdate',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.birthdate
 			});
 
 		var tr18 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th18 = $('<th></th>', {
 			  	text: 'sex'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td18 = $('<td></td>', {
-			  	//text: TempStore.sex,
-			  	//class: 'agencyInfo'
+			  
+			  	
 			});
 		var input18 = $('<input>', {
-			  	class: 'sex',
+			  	class: 'editAdd',
+			  	id: 'sex',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.sex
 			});
 
 		var tr19 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th19 = $('<th></th>', {
 			  	text: 'personal_description'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td19 = $('<td></td>', {
-			  	//text: TempStore.personal_description,
-			  	//class: 'agencyInfo'
+			  
+			  	
 			});
 		var input19 = $('<input>', {
-			  	class: 'personal_description',
+			  	class: 'editAdd',
+			  	id: 'personal_description',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.personalDescription
 			});
 
 		var tr20 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th20 = $('<th></th>', {
 			  	text: 'civil_status'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td20 = $('<td></td>', {
-			  	//text: TempStore.civil_status,
-			  	//class: 'agencyInfo'
+			  
+			  	
 			});
 		var input20 = $('<input>', {
-			  	class: 'civil_status',
+			  	class: 'editAdd',
+			  	id: 'civil_status',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.civilStatus
 			});
 
 		var tr21 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th21 = $('<th></th>', {
 			  	text: 'occupation'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td21 = $('<td></td>', {
-			  	//text: TempStore.occupation,
-			  	//class: 'agencyInfo'
+			  
+			  	
 			});
 		var input21 = $('<input>', {
-			  	class: 'occupation',
+			  	class: 'editAdd',
+			  	id: 'occupation',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.occupation
 			});
 
 		var tr22 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th22 = $('<th></th>', {
 			  	text: 'traveller_type'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td22 = $('<td></td>', {
-			  	//text: TempStore.traveller_type,
-			  	//class: 'agencyInfo'
+			  
+			  	
 			});
 		var input22 = $('<input>', {
-			  	class: 'traveller_type',
+			  	class: 'editAdd',
+			  	id: 'traveller_type',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.travellerType
 			});
 
 		var tr23 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th23 = $('<th></th>', {
 			  	text: 'show_acceptance'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td23 = $('<td></td>', {
-			  	//text: TempStore.show_acceptance,
-			  	//class: 'agencyInfo'
+			  
+			  	
 			});
 		var input23 = $('<input>', {
-			  	class: 'show_acceptance',
+			  	class: 'editAdd',
+			  	id:'show_acceptance',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.showAcceptance
 			});
 
 		var tr24 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th24 = $('<th></th>', {
 			  	text: 'last_visit'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td24 = $('<td></td>', {
-			  	//text: TempStore.last_visit,
-			  	//class: 'agencyInfo'
+			  
+			  	
 			});
 		var input24 = $('<input>', {
-			  	class: 'last_visit',
+			  	class: 'editAdd',
+			  	id: 'last_visit',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.lastVisit
 			});
 
 		var tr25 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th25 = $('<th></th>', {
 			  	text: 'belongs_to_site'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td25 = $('<td></td>', {
-			  	//text: TempStore.belongs_to_site,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input25 = $('<input>', {
-			  	class: 'belongs_to_site',
+			  	class: 'editAdd',
+			  	id: 'belongs_to_site',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.belongsToSite
 			});
 
 		var tr26 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th26 = $('<th></th>', {
 			  	text: 'regdate'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td26 = $('<td></td>', {
-			  	//text: TempStore.regdate,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input26 = $('<input>', {
-			  	class: 'regdate',
+			  	class: 'editAdd',
+			  	id: 'regdate',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.regdate
 			});
 
 		var tr27 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th27 = $('<th></th>', {
 			  	text: 'unregdate'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td27 = $('<td></td>', {
-			  	//text: TempStore.unregdate,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input27 = $('<input>', {
-			  	class: 'unregdate',
+			  	class: 'editAdd',
+			  	id: 'unregdate',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.unregdate
 			});
 
 		var tr28 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th28 = $('<th></th>', {
 			  	text: 'vip'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td28 = $('<td></td>', {
-			  	//text: TempStore.vip,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input28 = $('<input>', {
-			  	class: 'vip',
+			  	class: 'editAdd',
+			  	id:'vip',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.vip
 			});
 
 		var tr29 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th29 = $('<th></th>', {
 			  	text: 'status'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td29 = $('<td></td>', {
-			  	//text: TempStore.status,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input29 = $('<input>', {
-			  	class: 'status',
+			  	class: 'editAdd',
+			  	id: 'status',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.status
 			});
 
 		var tr30 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th30 = $('<th></th>', {
 			  	text: 'login'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td30 = $('<td></td>', {
-			  	//text: TempStore.last_visit,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input30 = $('<input>', {
-			  	class: 'login',
+			  	class: 'editAdd',
+			  	id: 'login',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.memberInfo.login
 			});
 
 		var tr31 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th31 = $('<th></th>', {
 			  	text: 'want_email'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td31 = $('<td></td>', {
-			  	//text: TempStore.want_email,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input31 = $('<input>', {
-			  	class: 'want_email',
+			  	class: 'editAdd',
+			  	id: 'want_email',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.wantEmail
 			});
 
 		var tr32 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th32 = $('<th></th>', {
 			  	text: 'session_code'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td32 = $('<td></td>', {
-			  	//text: TempStore.session_code,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input32 = $('<input>', {
-			  	class: 'session_code',
+			  	class: 'editAdd',
+			  	id: 'session_code',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.sessionCode
 			});
 
 		var tr33 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th33 = $('<th></th>', {
 			  	text: 'updated'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td33 = $('<td></td>', {
-			  	//text: TempStore.updated,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input33 = $('<input>', {
-			  	class: 'updated',
+			  	class: 'editAdd',
+			  	id: 'updated',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.updated
 			});
 
 		var tr34 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th34 = $('<th></th>', {
 			  	text: 'last_news_email'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td34 = $('<td></td>', {
-			  	//text: TempStore.last_news_email,
-			  	//class: 'agencyInfo'
+			  
+			  	
 			});
 		var input34 = $('<input>', {
-			  	class: 'last_news_email',
+			  	class: 'editAdd',
+			  	id: 'last_news_email',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.lastNewsEmail
 			});
 
 		var tr35 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th35 = $('<th></th>', {
 			  	text: 'last_news_email_info'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td35 = $('<td></td>', {
-			  	//text: TempStore.last_news_email_info,
-			  	//class: 'agencyInfo'
+			  	
+			  	
 			});
 		var input35 = $('<input>', {
-			  	class: 'last_news_email_info',
+			  	class: 'editAdd',
+			  	id: 'last_news_email_info',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.lastNewsEmailInfo
 			});
 
 		var tr36 = $('<tr></tr>', {
-			  	//text: 'Hello',
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var th36 = $('<th></th>', {
 			  	text: 'origin'
-			  	//class: 'agencyInfo'
+			  	
 			});
 		var td36 = $('<td></td>', {
-			  	//text: TempStore.origin,
-			  	//class: 'agencyInfo'
+			  
+			  	
 			});
 		var input36 = $('<input>', {
-			  	class: 'origin',
+			  	class: 'editAdd',
+			  	id: 'origin',
 			  	type: 'text',
 			  	value: TempStore.memberInfo.origin
 			});
@@ -1551,16 +1514,18 @@ var Display = Display || {
 
 	},
 	addH1: function(obj) {
-		var button = $('<h1>', {
+		var h1 = $('<h1>', {
 			  	text: obj.text,
 			});
 		console.log('obj.text addH1');
-		button.prependTo(obj.identifier);
+		h1.prependTo(obj.identifier);
 	},
 	addButton: function(obj) {
 		var button = $('<button>', {
 			  	text: obj.text,
-			  	class: obj.class
+			  	class: obj.class,
+			  	type: 'submit'
+
 			});
 		console.log(obj.class);
 		button.appendTo(obj.identifier);

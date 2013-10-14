@@ -38,139 +38,148 @@ var Listners = Listners || {
     editAdd: function () {
         console.log('add Listners');
         Listners.keyUpListner({
-            identifier:'#popup .member_id',
+            identifier:'#popup #member_id',
             functionality: TempStore.setMember_id
         });
         this.keyUpListner({
-            identifier:'#popup .password',
+            identifier:'#popup #password',
             functionality: TempStore.setPassword
         });
         this.keyUpListner({
-            identifier:'#popup .encrypted_password',
+            identifier:'#popup #encrypted_password',
             functionality: TempStore.setEncrypted_password
         });
         this.keyUpListner({
-            identifier:'#popup .first_name',
+            identifier:'#popup #first_name',
             functionality: TempStore.setFirst_name
         });
         this.keyUpListner({
-            identifier:'#popup .last_name',
+            identifier:'#popup #last_name',
             functionality: TempStore.setLast_name
         });
         this.keyUpListner({
-            identifier:'#popup .email',
+            identifier:'#popup #email',
             functionality: TempStore.setEmail
         });
         this.keyUpListner({
-            identifier:'#popup .country',
+            identifier:'#popup #country',
             functionality: TempStore.setCountry
         });
         this.keyUpListner({
-            identifier:'#popup .city',
+            identifier:'#popup #city',
             functionality: TempStore.setCity
         });
         this.keyUpListner({
-            identifier:'#popup .area_code',
+            identifier:'#popup #area_code',
             functionality: TempStore.setArea_code
         });
         this.keyUpListner({
-            identifier:'#popup .company_name',
+            identifier:'#popup #company_name',
             functionality: TempStore.setCompany_name
         });
         this.keyUpListner({
-            identifier:'#popup .address',
+            identifier:'#popup #companyChain',
+            functionality: TempStore.setcompanyChain
+        });
+        this.keyUpListner({
+            identifier:'#popup #address',
             functionality: TempStore.setAddress
         });
         this.keyUpListner({
-            identifier:'#popup .phone_daytime',
+            identifier:'#popup #phone_daytime',
             functionality: TempStore.setPhone_daytime
         });
         this.keyUpListner({
-            identifier:'#popup .phone_home',
-            functionality: TempStore.setPhone_home
+            identifier:'#popup #phone_home',
+            functionality: TempStore.setPhone_home, 
+            //functionalitySecond: Validation.phoneNumber
         });
         this.keyUpListner({
-            identifier:'#popup .phone_cellular',
+            identifier:'#popup #phone_cellular',
             functionality: TempStore.setPhone_cellular
         });
         this.keyUpListner({
-            identifier:'#popup .fax',
+            identifier:'#popup #fax',
             functionality: TempStore.setFax
         });
         this.keyUpListner({
-            identifier:'#popup .birthdate',
+            identifier:'#popup #birthdate',
             functionality: TempStore.setBirthdate
         });
         this.keyUpListner({
-            identifier:'#popup .sex',
+            identifier:'#popup #sex',
             functionality: TempStore.setSex
         });
         this.keyUpListner({
-            identifier:'#popup .civil_status',
+            identifier:'#popup #civil_status',
             functionality: TempStore.setCivil_status
         });
         this.keyUpListner({
-            identifier:'#popup .occupation',
+            identifier:'#popup #occupation',
             functionality: TempStore.setOccupation
         });
         this.keyUpListner({
-            identifier:'#popup .traveller_type',
+            identifier:'#popup #traveller_type',
             functionality: TempStore.setTraveller_type
         });
         this.keyUpListner({
-            identifier:'#popup .personal_description',
+            identifier:'#popup #personal_description',
             functionality: TempStore.setPersonal_description
         });
         this.keyUpListner({
-            identifier:'#popup .show_acceptance',
+            identifier:'#popup #show_acceptance',
             functionality: TempStore.setShow_acceptance
         });
         this.keyUpListner({
-            identifier:'#popup .last_visit',
+            identifier:'#popup #last_visit',
             functionality: TempStore.setLast_visit
         });
         this.keyUpListner({
-            identifier:'#popup .belongs_to_site',
+            identifier:'#popup #login',
+            functionality: TempStore.setLogin
+        });
+        this.keyUpListner({
+            identifier:'#popup #belongs_to_site',
             functionality: TempStore.setBelongs_to_site
         });
         this.keyUpListner({
-            identifier:'#popup .unregdate',
+            identifier:'#popup #unregdate',
             functionality: TempStore.setUnregdate
         });
         this.keyUpListner({
-            identifier:'#popup .vip',
+            identifier:'#popup #vip',
             functionality: TempStore.setVip
         });
         this.keyUpListner({
-            identifier:'#popup .status',
+            identifier:'#popup #status',
             functionality: TempStore.setStatus
         });
         this.keyUpListner({
-            identifier:'#popup .regdate',
+            identifier:'#popup #regdate',
             functionality: TempStore.setRegdate
         });
         this.keyUpListner({
-            identifier:'#popup .want_email',
+            identifier:'#popup #want_email',
             functionality: TempStore.setWant_email
         });
         this.keyUpListner({
-            identifier:'#popup .session_code',
+            identifier:'#popup #session_code',
             functionality: TempStore.setSession_code
         });
         this.keyUpListner({
-            identifier:'#popup .updated',
+            identifier:'#popup #updated',
             functionality: TempStore.setUpdated
         });
         this.keyUpListner({
-            identifier:'#popup .last_news_email',
+            identifier:'#popup #last_news_email',
             functionality: TempStore.setLast_news_email
         });
         this.keyUpListner({
-            identifier:'#popup .last_news_email_info',
+            identifier:'#popup #last_news_email_info',
             functionality: TempStore.setLast_news_email_info
         });
         this.keyUpListner({
-            identifier:'#popup .origin',
+            identifier:'#popup #origin',
             functionality: TempStore.setOrigin
         });
 
@@ -209,6 +218,11 @@ var Listners = Listners || {
         console.log('keyup Listners');
         $this.keyup(function(event){
             obj.functionality(this.value);
+            //console.log(obj.functionalitySecond);
+           // if (obj.functionalitySecond) {
+                 MyEvent.eventHandlers(event);
+           // };
+           
             //TempStore.setTypedVal(this.value);
             //console.log(TempStore.getTypedVal());
         });

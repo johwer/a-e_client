@@ -11,3 +11,10 @@ function addOnLoadFunction(func) {
 		window.addEventListener('load', func);
 	}
 }
+if (!String.prototype.trim) {
+	   //code for trim
+	   console.log('Running');
+		String.prototype.trim = function() {
+		   return this.replace(/^\s\s*/, '').replace(/\s\s*$/, '');	   
+		};
+}
