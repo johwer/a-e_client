@@ -220,11 +220,27 @@ var Listners = Listners || {
             obj.functionality(this.value);
             //console.log(obj.functionalitySecond);
            // if (obj.functionalitySecond) {
-                 MyEvent.eventHandlers(event);
+                console.log('Start');
+            console.log($(event.target).attr("id"));
+            console.log($(event.target).attr('class'));
+            console.log($(event.target).val());
+            console.log($(event.target).html());
+            console.log('Stop');
+
+                var elementId = $(event.target).attr("id"),
+                    tempElementClass = $(event.target).attr('class'),
+                    elementVal = $(event.target).val(),
+                    elementInnerHtml = $(event.target).html();
+
+                var elementClassRegExp = tempElementClass.match(/^([\w\-]+)/g);
+                var elementClass = elementClassRegExp.toString();
+                
+                 MyEvent.eventHandlers(elementId, elementClass, elementVal, elementInnerHtml);
            // };
            
             //TempStore.setTypedVal(this.value);
             //console.log(TempStore.getTypedVal());
+            
         });
     },
     addListerns: function(obj) {
@@ -235,7 +251,22 @@ var Listners = Listners || {
 
         $this.on('click', function(event) {
             console.log('button click');
-            MyEvent.eventHandlers(event);
+             console.log('Start');
+            console.log($(event.target).attr("id"));
+            console.log($(event.target).attr('class'));
+            console.log($(event.target).val());
+            console.log($(event.target).html());
+            console.log('Stop');
+
+                var elementId = $(event.target).attr("id"),
+                    tempElementClass = $(event.target).attr('class'),
+                    elementVal = $(event.target).val(),
+                    elementInnerHtml = $(event.target).html();
+
+                var elementClassRegExp = tempElementClass.match(/^([\w\-]+)/g);
+                var elementClass = elementClassRegExp.toString();
+
+                 MyEvent.eventHandlers(elementId, elementClass, elementVal, elementInnerHtml);
            
         });
 

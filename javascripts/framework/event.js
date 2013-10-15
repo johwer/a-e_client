@@ -1,18 +1,26 @@
 var MyEvent = MyEvent || {
 
-	eventHandlers: function (event) {
+	eventHandlers: function (elementId, elementClass, elementVal, elementInnerHtml) {
 		console.log('JIPOP');
-		console.log(event);
+		
+
+        /*
 		var elementInnerText    = event.originalEvent.target.innerHTML,
                 elementClass    = event.originalEvent.target.classList[0],
                 elementId       = event.originalEvent.target.id,
                 elmenteValue    = event.originalEvent.target.value;
 
+
+                console.log('event.originalEvent.target.classList');
+                console.log(event.originalEvent.target.classList);
+                if(event.originalEvent.target.classList == 'search') {
+                    console.log('blow me');
+                }
         //Store for global value last clicked text
-        TempStore.setClickedVal(elementInnerText);
+        */
+        TempStore.setClickedVal(elementInnerHtml);
 
 		if (elementClass === "company" || elementClass === "country" || elementClass === "city" || elementClass === "areaCode" || elementClass === "address") {
-            event.preventDefault();
             console.log("Call Obj function for new search");
             Functionality.agencySearch();
 
@@ -58,7 +66,7 @@ var MyEvent = MyEvent || {
             console.log ('Edit class fund');
             if (elementId === "phone_home" || elementId === "phone_daytime" || elementId === "phone_cellular" || elementId === "fax") {
                 console.log('phone_home');
-                Validation.phoneNumber(elementId, elmenteValue);
+                Validation.phoneNumber(elementId, elementVal);
             }
 
         }
