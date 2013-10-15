@@ -39,7 +39,7 @@
     
     $.each($.event.keyHooks.props.concat($.event.mouseHooks.props).concat($.event.props), function(i, prop){
             if(prop !== "target"){
-                    Object.defineProperty(jQuery.Event.prototype,prop,{
+                    Object.defineProperty($.Event.prototype,prop,{
                       get : function(){
                             // get the original value
                             var originalValue = this.originalEvent[prop]
@@ -58,12 +58,12 @@
     
     
     $.event.fix = function(event){
-            if ( event[ jQuery.expando ] ) {
+            if ( event[ $.expando ] ) {
                     return event;
             }
             // Create a jQuery event with at minimum a target and type set
             var originalEvent = event,
-                    event = jQuery.Event( originalEvent );
+                    event = $.Event( originalEvent );
  
             event.target = originalEvent.target;
             // Fix target property, if necessary (#1925, IE 6/7/8 & Safari2)
