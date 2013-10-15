@@ -105,7 +105,7 @@ var Functionality = Functionality || {
 	    	Display.addButton({
 	    		text: 'Submit edit',
 	    		identifier: '#popup #edit-add-list',
-	    		class: 'addPopupEditButton button orange margin10'
+	    		elementClass: 'addPopupEditButton button orange margin10'
 	    	});
 	    	Listners.addListerns({
             	identifier:'#popup .addPopupEditButton',
@@ -130,7 +130,7 @@ var Functionality = Functionality || {
 	    	Display.addButton({
 	    		text: 'Submit add',
 	    		identifier: '#popup #edit-add-list',
-	    		class: 'addPopupAddButton button orange margin10'
+	    		elementClass: 'addPopupAddButton button orange margin10'
 	    	});
 	    	Listners.addListerns({
             	identifier:'#popup .addPopupAddButton',
@@ -283,3 +283,4 @@ var Functionality = Functionality || {
 	}
 
 }
+Functionality.init();
