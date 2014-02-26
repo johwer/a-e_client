@@ -5,97 +5,96 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=EDGE; IE=9; IE=8;">
 	
 	<title>Agent and employee client</title>
-
+	<!-- Stylesheets -->
+	 <link rel="stylesheet" type="text/css" href="css/main.css">
+	<!-- Stylesheets END-->
+	
 	<!-- Include Scripts -->
-	<script src="/javascripts/tools/jquery-1.9.1.min.js"> </script>
+	<script src="/default/a-e_client/scripts/tools/require.min.js" data-main="/default/a-e_client/scripts/modules/config"> </script>
 	<!-- Include Scripts END-->
 	
-	<!-- Stylesheets -->
-	<link rel="stylesheet" type="text/css" href="/stylesheets/oceanfront.css"/>
-	<link rel="stylesheet" type="text/css" href="/stylesheets/a-e_client.css"/>
-	<!-- Stylesheets END-->
-
 </head>
 <body>
 	<div id="main-content">
 		<div id="search-area">
-			
 			<div class="searchContainer inline">
 				<div class="styled-select valign-middle">
-					<select>
-						<option selected="selected" value="bo">Boxoffice.se</option>
-						<option value="ts">Ticketservice.no</option>
-						<option value="ud">Arteudland.dk</option>
+					<select class="dropDownChange clickable">
+						<option value="bo" selected="selected">boxoffice.se</option>
+						<option value="ts">ticketservice.no</option>
+						<option value="ud">arteudland.dk</option>
 					</select>
-				
 				</div>
-				<input type="search" value="" class="search" id="search" placeholder="Search for" results/>
+				<!-- Don't use type="search" in input here because safari can't change height property with it -->
+				<input value="" class="search" id="search" placeholder="Search for" results/>
 				<button class="searchSubmit button blue" id="sumbit"><span class="magnifiSymbol"></span></button>
 			</div>
-			
+			<progress></progress>
 			<div class="notification info" style="position: relative;">
 				<span>INFORMATION:</span><br/>
-				Total angency: <span>123</span><br/>
-				Total agencys for <span>Boxoffice: </span><span>48</span><br/>
-				Number of users: <span class="nrOfMemberfieldRows"></span>
+				Total number of agencies: <span class="nrOfTotalAgencies"></span><br/>
+				Total number of members: <span class="nrOfTotalMembers"></span>
 			</div>
-		
-			
-			<div id="buttonArea">
-				<button class="addAgencyButton button green  ">+ Add agency</button>
-				<button class="addMemberButton button green  ">+ Add member</button>
-				
+			<div class="notification error" style="position: relative; display:none;">
+				<!-- <span>Error:</span><br/> -->
+				<span class="errorText">dfd</span><br/>
+				Error type: <span class="errorjqXHR">dfd</span><br/>
+				Error text status: <span class="errorTextStatus">dfd</span><br/>
+				Error thrown: <span class="errorErrorThrown">dfd</span><br/>
 			</div>
 		</div>
 		<div id="navigator-area">
-			
-				
-				<div id="navigator-area-agency">
-				<h3>Agency field</h3>
+				<div id="navigator-area-agency" >
+				<div><h3>Agencies <span class="nrOfAgencyfieldRows">0</span></h3></div>
 				<div id="navigator-area-agency-list">
-					<table border="0" class="tableAgency" id="tableAgency">
-						<tr class="headings">
-							<th>company</th>
-							<th>country</th>
-							<th>city</th>
-							<th>area_code</th>
-							<th>address</th>
+					<table border="0" style="float:left;" id="tableCommissionRate">
+						<tr data-sort="commission" class="commission">
+							<th data-sort="commission" class="commission clickable hover">%</th>
 						</tr>
-						
+					</table>
+					<table border="0" class="tableAgency" id="tableAgency">
+						<colgroup>
+						    <col span="1" style="width:42%" >
+						    <col span="1" style="width:20%" >
+						    <col span="1" style="width:8%">
+						    <col span="1"style="width:30%">
+						</colgroup>
+						<tr class="headings">
+							<th data-sort="companyName" class="clickable hover">company</th>
+							<th data-sort="city" class="clickable hover">city</th>
+							<th data-sort="areaCode" class="clickable hover">area</th>
+							<th data-sort="address" class="clickable hover">address</th>
+						</tr>
 					</table>
 				</div>
 			</div>
 			<div id="navigator-area-member">
-				<h3>Members field</h3>
+				<h3>Members <span class="nrOfMembersfieldRows"></span></h3>
 				<div id="navigator-area-member-list">
-				
-				<table border="0" class="tableMember" id="tableMember">
-					<tr>
-						<th>login</th>
-						<th class="align-right">first name</th>
-						<th>last name</th>
-						<th>e-mail address</th>
-						<th>phoneDaytime</th>
-						<th>phoneCellular</th>
-				</table>
-				
+					<table border="0" class="tableMember" id="tableMember">
+						<tr>
+							<th data-sort="login" class="clickable hover">login</th>
+							<th data-sort="firstName" class="clickable hover align-right">first name</th>
+							<th data-sort="lastName" class="clickable hover">last name</th>
+							<th data-sort="email" class="clickable hover">e-mail</th>
+							<th data-sort="phoneDaytime" class="clickable hover" >phoneDaytime</th>
+							<!--<th data-sort="phoneCellular" class="clickable hover">phoneCellular</th>-->
+						</tr>
+					</table>
 				</div>
 			</div>
 		</div>
-		<div id="view-area">
-
-			<h3>Member info</h3>
-			<div id="view-area-list">
-				<table border="0" id="tableView">
-					
-				</table>
-
+			<div id="function-area">
+				<h3>Function-area</h3>
+				<button class="activetOrDeactiveButton button blue margin10">Activate/deactivet all members per agenices</button>
+				<button class="commissionAndCompanyChainEditButton button blue margin10">Edit commission and company chain</button>
+				<button class="customizeButton button pink margin10">Customize view Off</button>
+				<button class="toggleViewContentButton button pink margin10">Toggle view option1</button>
+				<button class="addAgencyButton button green margin10">+ Add agency</button>
+				<button class="addMemberButton button green margin10">+ Add member</button>
 			</div>
-				<button class="editButton button orange margin10">Edit</button>
-				<button class="removeButton button red margin10">- Remove</button>
-		</div>
 	</div>
-
+	<!-- Popup window -->
 	<div id="popup" style="display:none;">
 		<div class="ui-popup-overlay"></div>
 		<div class="ui-popup">
@@ -105,35 +104,14 @@
 		
 		<div class="ui-popup ui-popup_active_true tau-page-entity" style="display:block;">
 			<div class="closeButton"></div>
-			<div class="tau-app i-role-application i-browser_engine_mozilla ui-popup-content tau-page-entity" role="application"><form>
+			<div class="tau-app i-role-application i-browser_engine_mozilla ui-popup-content tau-page-entity" role="application">
 				<div id="edit-add-list">
 					<table border="0" id="tableEditAdd">
-						
-					
 					</table>
-				</div></form>
+				</div>
 			</div>
 		</div>
 	</div>
-
-	<!-- Include Scripts -->
-	
-	<!--<script src="/javascripts//tools/jQuery.event.fix.js"></script>-->
-	<script src="/javascripts/tools/fastfix.js"></script>
-	<script src="/javascripts/framework/global.js"></script>
-	<script src="/javascripts/framework/tempStore.js"></script>
-	<script src="/javascripts/framework/validation.js"></script>
-	<script src="/javascripts/framework/event.js"></script>
-	
-	<script src="/javascripts/framework/listners.js"></script>
-	<script src="/javascripts/framework/communication.js"></script>
-	
-	<script src="/javascripts/framework/display.js"></script>
-	<script src="/javascripts/framework/functionality.js"></script>
-	<script src="/javascripts/framework/main.js"></script>
-
-
-	<!-- Include Scripts END-->
 </body>
 </html>
 

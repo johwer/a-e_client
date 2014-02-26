@@ -1,0 +1,15 @@
+
+/*
+Use import is often bad but in this case the main.css and its files will be compiled to main-built.css for more info about optimizing read 
+http://requirejs.org/docs/optimization.html#onecss or http://requirejs.org/docs/optimization.html#wholeproject
+*/ 
+@import url("button.css");
+@import url("oceanfront.css");
+@import url("a-e_client.css");
+@import url("jquery-ui-1.10.4.custom.min.css");
+.ui-widget-content{
+	border: none;
+	background: none;
+	color: none;
+}
+.ui-resizable-helper { border: 1px dotted #00F; }

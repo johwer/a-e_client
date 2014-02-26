@@ -1,0 +1,88 @@
+{
+    "Results": {
+        "agencyInfo": [
+            {
+                "companyName": "Boxoffice",
+                "companyChain": "Abc",
+                "country": "Sweden",
+                "city": "Stockholm",
+                "areaCode": "104 51 ",
+                "address": "Vallhallavägen 211"
+            },
+            {
+                "companyName": "Resia",
+                "companyChain": "Abc",
+                "country": "Sweden",
+                "city": "Göteborg",
+                "areaCode": "405 23",
+                "address": "Kruthusgatan 17"
+            },
+            {
+                "companyName": "Resia Travel Group",
+                "companyChain": "Abc",
+                "country": "Sweden",
+                "city": "Göteborg",
+                "areaCode": "405 23",
+                "address": "Kruthusgatan 17"
+            },
+            {
+                "companyName": "Resfeber",
+                "companyChain": "Abc",
+                "country": "Sweden",
+                "city": "Stockholm",
+                "areaCode": "104 51 ",
+                "address": "Vallhallavägen 211"
+            }
+        ],
+        "memberInfo": [
+            {
+                "login": "Jwe090uW",
+                "firstName": "Erik",
+                "lastName": "Eriksson",
+                "email": "Erik.Eriksson@boxoffice.se",
+                "phoneDaytime": "0771-57 57 57",
+                "phoneCellular": "072 70757 37"
+            },
+            {
+                "login": "Qjijv44g",
+                "firstName": "Maria",
+                "lastName": "Andersson",
+                "email": "Maria.Andersson@boxoffice.se",
+                "phoneDaytime": "0771-37 57 57",
+                "phoneCellular": "072 73757 37"
+            },
+            {
+                "login": "JOIJO334",
+                "firstName": "Lars",
+                "lastName": "Karlsson",
+                "email": "Lars.Karlsson@resia.com",
+                "phoneDaytime": "0771-17 57 57",
+                "phoneCellular": "072 10757 37"
+            },
+            {
+                "login": "Y90cv0sv",
+                "firstName": "Elisabeth",
+                "lastName": "Olsson",
+                "email": "Elisabeth.Olsson@resia.com",
+                "phoneDaytime": "0771-57 37 57",
+                "phoneCellular": "072 70717 37"
+            },
+            {
+                "login": "JOJ2cmse",
+                "firstName": "Johan",
+                "lastName": "Wergelius",
+                "email": "johan.wergelius@resia.com",
+                "phoneDaytime": "0771-57 87 57",
+                "phoneCellular": "072 70758 37"
+            },
+            {
+                "login": "O0jvs9i34",
+                "firstName": "Per",
+                "lastName": "Larsson",
+                "email": "Per.wergelius@resiatravelgroup.se",
+                "phoneDaytime": "0771-5797 57",
+                "phoneCellular": "072 70797 37"
+            }
+        ]
+    }
+}
